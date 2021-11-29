@@ -32,6 +32,7 @@
  */
 
 @import url('https://fonts.googleapis.com/css?family=Exo%202');
+@import url('https://fonts.googleapis.com/css?family=Archivo');
 
 html {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
@@ -84,11 +85,14 @@ html {
   font-family: "Exo 2", sans-serif;
   font-weight: 800;
   font-style: bold;
-  font-size: 3.25rem;
+  font-size: 3.6rem;
 }
 
 /* Sidebar nav */
 .sidebar-nav {
+  font-family: "Archivo", sans-serif;
+  font-weight: 100;
+  font-size: 0.85rem;
   margin-bottom: 1rem;
 }
 .sidebar-nav-item {
@@ -109,14 +113,14 @@ a.sidebar-nav-item:focus {
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-@media (min-width: 48em) {
+/* @media (min-width: 48em) {
   .sidebar-sticky {
     position: absolute;
     right:  1rem;
     bottom: 1rem;
     left:   1rem;
   }
-}
+} */
 
 
 /* Container

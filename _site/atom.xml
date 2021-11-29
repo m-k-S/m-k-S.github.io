@@ -4,13 +4,76 @@
  <title>MKSA</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2021-11-29T00:57:03-05:00</updated>
+ <updated>2021-11-29T01:25:57-05:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Max Shirokawa</name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Introduction to Atomic Trapping</title>
+   <link href="http://localhost:4000/2021/11/29/intro-to-atomic-trapping/"/>
+   <updated>2021-11-29T00:00:00-05:00</updated>
+   <id>http://localhost:4000/2021/11/29/intro-to-atomic-trapping</id>
+   <content type="html">&lt;h1 id=&quot;what-is-atomic-physics&quot;&gt;What is Atomic Physics?&lt;/h1&gt;
+
+&lt;p&gt;The taxonomy of scientific disciplines is often arcane and unintuitive, and physics is no exception. When one hears the phrase ‘atomic physics’, they might be tempted to assume some relationship to ‘nuclear physics’ – after all, what is an atom but a nucleus with bound electrons? Yet these two fields could hardly be more distinct, sharing entirely separate histories, techniques, and applications.&lt;/p&gt;
+
+&lt;p&gt;The theory of atomic physics typically considers individual atoms in isolation. In the 20th century, this posed a seemingly insurmountable practical challenge – by what methods could one experimentally isolate an atom, so that those theories could be verified and further developed? At standard temperature and pressure, a molecule such as oxygen travels at over 400 meters per second, rendering existing observational tools at the time useless. It was not until the late 1980s (more than 30 years after the development of the atomic bomb, a major breakthrough of nuclear science!), when Bell Labs scientists William Phillips, Claude Cohen-Tannoudji, David Pritchard, and Steven Chu (among others) designed and fabricated the first apparatus for slowing and controlling ensembles of atoms in a gaseous or vapor form – the &lt;strong&gt;magneto-optical trap&lt;/strong&gt;. This signaled a turning point in the study of atoms; for the first time, scientists could now create gases of atoms slow enough to be studied by conventional (e.g. spectroscopic) methods.&lt;/p&gt;
+
+&lt;p&gt;This practically instantly opened the door for a new generation of atomic physics. For example, in that same year, Steven Chu went on to utilize &lt;a href=&quot;https://en.wikipedia.org/wiki/Optical_tweezers&quot;&gt;optical tweezers&lt;/a&gt;, a particle-trapping technique that had hitherto only been utilized for controlling macroscopic particles, to isolate individual atoms from within a magneto-optical trap. It only took a few more years for several more incredible achievements in the field; for instance, in 1985, Eric Cornell and Carl Weiman were able to cool an ensemble of Rubidium-87 atoms to below 170 nanokelvin, creating the first ‘pure’ Bose-Einstein condensate, a state of matter in which all constituent particles are occupying the same state.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FIGURE: OPTICAL TWEEZERS OR BEC?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Nowadays, the magneto-optical trap is ubiquitous in atomic physics labs, as it allows for researchers to experiment on individual (or arrays of individual) atoms. The objective of such experiments are typically investigating light-matter interactions, or how the trapped atoms behave under the influence of external electromagnetic waves. Modern uses of the magneto-optical trap include &lt;a href=&quot;https://siliconangle.com/2021/07/21/atom-computing-exits-stealth-quantum-computing-system-made-atoms-controlled-lasers/&quot;&gt;quantum computation&lt;/a&gt;, atomic clocks (&lt;a href=&quot;https://spectrum.ieee.org/optical-atomic-clock-advantage-expands-electronics&quot;&gt;which have been proven to be the most precise timekeepers currently existing&lt;/a&gt;), and various quantum sensors &lt;a href=&quot;https://syrte.obspm.fr/spip/science/iaci/projets-en-cours/gravimetre/article/gravimetre-a-atomes-froids?lang=en&quot;&gt;capable of detecting even the most minute changes in signals&lt;/a&gt;. The field of atomic physics is so nascent that every year, several novel applications are published, making it one of the most exciting and fastest-growing branches of science.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FIGURE: COLDQUANTA COMPUTER?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;magneto-optical-trapping&quot;&gt;Magneto-Optical Trapping&lt;/h1&gt;
+
+&lt;p&gt;How does a magneto-optical trap work? The keys, as the name suggests, are &lt;strong&gt;coherent light&lt;/strong&gt; (most commonly found in the form of &lt;strong&gt;lasers&lt;/strong&gt;) and a sufficiently strong &lt;strong&gt;magnetic field gradient&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;magnetics&quot;&gt;Magnetics&lt;/h2&gt;
+
+&lt;p&gt;Since non-ionized atoms are inherently ‘neutral’ (having just as many electrons as protons), one might expect them to not interact with an external magnetic field. However, this is not the case – since the electrons and protons share a different spatial density (i.e. are not directly on top of each other), every atom will have a (typically very small) &lt;a href=&quot;https://en.wikipedia.org/wiki/Magnetic_moment&quot;&gt;&lt;strong&gt;magnetic dipole moment&lt;/strong&gt;&lt;/a&gt;. This allows them to interact, albeit weakly, with an applied magnetic field.&lt;/p&gt;
+
+&lt;p&gt;A &lt;a href=&quot;https://en.wikipedia.org/wiki/Magnetic_trap_(atoms)&quot;&gt;magnetic trap&lt;/a&gt; works by creating an energy minima in a region of space through the interaction of the magnetic dipole with the external magnetic field. The spatial energy shift is given by:&lt;/p&gt;
+
+\[\Delta E =- \vec{\mu} \cdot \vec{B}\]
+
+&lt;p&gt;where \(\vec{\mu}\) is the magnetic dipole moment and \(\vec{B}\) is the magnetic field vector.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FIGURE: ENERGY DIAGRAM&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This creates a potential energy valley, in which an atom is ‘incentivized’ to be at the trough. However, analogously to classical mechanics, a ball rolling in a valley may ‘escape’ that valley if its kinetic energy is higher than the potential energy difference between the trough and peak of the valley. And, as mentioned earlier, atoms in gaseous or vapor form at room temperature and pressure move extremely fast – between this fact, and the relatively small magnetic dipole moment of neutral atoms, it would take an impractically strong magnetic field to trap room-temperature neutral atoms.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FIGURE: ENERGY DIAGRAM ANIMATION&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;However, if the kinetic energy of the atoms were to be reduced, then at some point, we could use a reasonably large magnetic field to create a shift in energy sufficient enough to trap said atoms in a desired region of space. This is where the other half of the magneto-optical trap comes in – the optics.&lt;/p&gt;
+
+&lt;h2 id=&quot;optics&quot;&gt;Optics&lt;/h2&gt;
+
+&lt;p&gt;As Einstein theorized in the early 20th century, light is &lt;a href=&quot;https://en.wikipedia.org/wiki/Photon&quot;&gt;&lt;strong&gt;quantized&lt;/strong&gt;&lt;/a&gt;, i.e. light waves are made up of individual particles known as photons. &lt;a href=&quot;https://en.wikipedia.org/wiki/Photon&quot;&gt;&lt;/a&gt;Atoms interact with light through their bound electrons, in a process during which an electron may absorb a photon and gain that photon’s energy. This process is known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Electron_excitation&quot;&gt;&lt;strong&gt;electron excitation&lt;/strong&gt;&lt;/a&gt;, and has a reciprocal process known as &lt;strong&gt;electron decay&lt;/strong&gt;, in which an ‘excited’ electron may re-emit the photon it absorbed, and lose that photon’s energy.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FIGURE: ELECTRON DECAY DIAGRAM WITH ENERGY LEVELS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;These levels, at first glace, appear to be separated by fixed, definite amounts of energy, and therefore one might expect that a photon must have some exact energy for the atom to absorb it. However, due to &lt;a href=&quot;https://math.ucr.edu/home/baez/uncertainty.html&quot;&gt;time-energy uncertainty&lt;/a&gt;, this is actually not the case; there is an ‘uncertainty’ inherent in the energy of the excited electronic state, which we denote the &lt;strong&gt;line width&lt;/strong&gt; of the atomic transition. Moreover, by the time-energy uncertainty relation, the wider this line width is, the shorter the lifetime of the excited state (before it decays back to the original state), and vice versa.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FIGURE: LINE WIDTH&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The line width of an atomic transition tells us what range of frequencies / wavelengths our laser has to be within to be able to excite the electrons in the atoms we’re shining it on. For an atom such as Rubidium-87, and a typical transition we might be interested in, such as the \(5^2 S_{1/2} \to 5^2 P_{3/2}\) (a ground state to a ‘first’ excited state) transition, this line width would be around ~38 MHz, which corresponds to a range of tens of &lt;em&gt;femtometers&lt;/em&gt; in terms of wavelength. In other words, if we want to shine a laser on a Rubidium-87 atom such that it will absorb photons and undergo this transition, we need to make sure that our laser has a wavelength no more than about 40 femtometers from the central transition wavelength of 780,241,209 femtometers.&lt;/p&gt;
+
+&lt;p&gt;The construction of such a laser is&lt;/p&gt;
+
+&lt;p&gt;Another source of variability in energy comes&lt;/p&gt;
+
+&lt;h1 id=&quot;fabricating-a-magneto-optical-trap&quot;&gt;Fabricating a Magneto-Optical Trap&lt;/h1&gt;
+
+&lt;p&gt;The magneto-optical trap (henceforth referred to as a ‘MOT’), at its very core, is a very simple apparatus. While the details of the components and specifications may change depending on the element you wish to trap and the downstream application, all MOTs consist of two main subsystems: at least one near-monochromatic (i.e. frequency-stabilized, more on this later) laser, and an ultra-high vacuum chamber.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Introducing Hyde</title>
