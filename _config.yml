@@ -10,7 +10,7 @@ relative_permalinks: false
 title:            MKSA
 # tagline:          'A Jekyll theme'
 description:      ''
-baseurl:          /
+baseurl:          ''
 
 author:
   name:           'Max Shirokawa'
