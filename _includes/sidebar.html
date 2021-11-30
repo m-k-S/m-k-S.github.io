@@ -1,3 +1,6 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
@@ -6,8 +9,8 @@
           {{ site.title }}
         </a>
       </h1>
-      <p class="lead">{{ site.description }}</p>
-      <img src="public/me_and_haas.jpg" style="max-width: 100; min-width: 300px; height: auto; display: block;">
+      <!-- <p class="lead">{{ site.description }}</p> -->
+      <img src="{{ site.baseurl }}public/me_and_haas.jpg" style="max-height: 50vh; width: auto; display: block;">
     </div>
 
     <nav class="sidebar-nav">
@@ -26,6 +29,21 @@
 
     </nav>
 
-    <p style="position:absolute; bottom:0; width:100%; font-size: 0.5rem;">&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
+    <p class="sidebar-footer" style="position:absolute; bottom:0; width:100%; font-size: 0.5rem;">
+      <a style="font-size:25px; position: center;">
+        <a href="https://twitter.com/m_shirokawa" class="icon-block" style="font-size:25px;">
+          <i class="fa fa-twitter" style="color:#ADD8E6;"></i>
+        </a>
+        <a href="https://github.com/m-k-S" class="icon-block" style="font-size:25px; padding-left:8px;">
+          <i class="fa fa-github" style="color:#FFFFFF;"></i>
+        </a>
+        <a href="https://incoherent.substack.com/" class="icon-block" style="font-size:25px; padding-left:8px; color:#FFD580;">
+          <i class="fa fa-rss"></i>
+        </a>
+      </a>
+
+      <br><br>
+      &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+    </p>
   </div>
 </div>

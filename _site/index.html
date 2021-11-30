@@ -16,13 +16,13 @@
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="public/css/poole.css">
-  <link rel="stylesheet" href="public/css/syntax.css">
-  <link rel="stylesheet" href="public/css/hyde.css">
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/hyde.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   <!-- Icons -->
-  <link rel="shortcut icon" href="public/favicon.ico">
+  <link rel="shortcut icon" href="/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -40,16 +40,19 @@
 
 
   <body>
-    <div class="sidebar">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="">
+        <a href="/">
           MKSA
         </a>
       </h1>
-      <p class="lead"></p>
-      <img src="public/me_and_haas.jpg" style="max-width: 100; min-width: 300px; height: auto; display: block;">
+      <!-- <p class="lead"></p> -->
+      <img src="/public/me_and_haas.jpg" style="max-height: 50vh; width: auto; display: block;">
     </div>
 
     <nav class="sidebar-nav">
@@ -65,14 +68,109 @@
 
     </nav>
 
-    <p style="position:absolute; bottom:0; width:100%; font-size: 0.5rem;">&copy; 2021. All rights reserved.</p>
+    <p class="sidebar-footer" style="position:absolute; bottom:0; width:100%; font-size: 0.5rem;">
+      <a style="font-size:25px; position: center;">
+        <a href="https://twitter.com/m_shirokawa" class="icon-block" style="font-size:25px;">
+          <i class="fa fa-twitter" style="color:#ADD8E6;"></i>
+        </a>
+        <a href="https://github.com/m-k-S" class="icon-block" style="font-size:25px; padding-left:8px;">
+          <i class="fa fa-github" style="color:#FFFFFF;"></i>
+        </a>
+        <a href="https://incoherent.substack.com/" class="icon-block" style="font-size:25px; padding-left:8px; color:#FFD580;">
+          <i class="fa fa-rss"></i>
+        </a>
+      </a>
+
+      <br><br>
+      &copy; 2021. All rights reserved.
+    </p>
   </div>
 </div>
 
 
     <div class="content container">
       <div class="posts">
-  Posts go here.
+  <div class="post">
+
+    <h1>OpenMOT: Open Source Atomic Trapping</h1>
+    <span class="post-date">Documentation and instructional guide for constructing a magneto-optical trap for rubidium atoms</span>
+
+    Atomic 'traps' capable of cooling ensembles of atoms to a fraction above absolute zero are quickly becoming a leading method
+    for the generation of single-photon sources, quantum sensors, and <a href="https://arxiv.org/abs/2006.12326">quantum computers</a>.
+    However, there is a distinct lack of publicly available practical implementation details for these devices. Moreover, of this sparse
+    documentation, the majority of it relies on purchasing a significant amount of expensive commercial equipment (e.g. a <a href="https://advlabs.aapt.org/bfy/Detail.cfm?id=4761">a rubidium MOT tutorial from Ithaca
+    College</a>, which utilizes a completely pre-fabbed vacuum and atom dispenser system; their total build costs over $40,000). <br> <br>
+
+    This series of posts describes my experience in fabricating a magneto-optical trap from scratch, a process which has taken me eight months (and counting) and a total expenditure of just under $4,000
+    (including several mistakes and unnecessary purchases; the final bill of materials should be significantly cheaper, albeit reliant on some auction site luck). <br> <br>
+
+    In particular, I aim to explain the history, principles, and fabrication of such an apparatus. These posts assume no prior knowledge in atomic physics, but implementation does require
+    access to electronics and machining equipment.
+
+    <h2>Theory</h2>
+
+    Start here if you are interested in how a magneto-optical trap (MOT) works, and why they are important tools in science:<br><br>
+
+    <ol type="I">
+      <li> <a href="/2021/10/13/intro-to-atomic-trapping/">Introduction to Atomic Trapping</a></li>
+      <li>An Overview of Fabrication</li>
+      <li>The Monochromatic Laser</li>
+      <li>The Vacuum System</li>
+      <li>Cooling Atoms</li>
+      <li>Analysis</li>
+    </ol>
+
+    <h2>Fabrication Guide</h2>
+
+    The following are concise guides on how to construct the various components required to implement your own atom trap.
+
+    <h3>Laser System</h3>
+
+    <h4 style="margin-left:20px;">Optical Instruments</h4>
+    <ol style="margin-left:40px;" type="a">
+      <li> <a href="">'Cateye' External-Cavity Diode Laser</a></li>
+      <li> <a href="">3D Printed Kinematic Mirror Mounts</a></li>
+      <li> <a href="">DIY Faraday Rotator</a></li>
+    </ol>
+
+    <h4 style="margin-left:20px;">Control Circuits</h4>
+
+    <ol style="margin-left:40px;" type="a">
+      <li> <a href="">Precision Laser Diode Current Controller</a> (0-200mA, 100nA RMS noise)</li>
+      <li> <a href="">Precision Piezoelectric Actuator Driver</a> (8-95V, 100uV RMS noise)</li>
+      <li> <a href="">Temperature Stabilizer Controller</a> (2A output, uses Peltier device and AD590)</li>
+    </ol>
+
+    <h4 style="margin-left:20px;">Saturated Absorption Spectroscopy</h4>
+
+    <ol style="margin-left:40px;" type="a">
+      <li> <a href="">Theory</a></li>
+      <li> <a href="">Setup Guide</a></li>
+    </ol>
+
+    <h3>Vacuum System</h3>
+
+    <h4 style="margin-left:20px;"><a href="">Full System Schematics</a></h4>
+
+    <h4 style="margin-left:20px;">Mounting Apparatus and Controllers</h4>
+      <ol style="margin-left:40px;" type="a">
+        <li> <a href="">Tetrahedral Optical Trap Mount</a></li>
+        <li> <a href="">Magnetic Coil Mount w/ 3-Axis Compensation</a></li>
+        <li> <a href="">4-Channel Magnetic Coil Controller</a></li>
+        <li> <a href="">Beam Alignment Controller</a></li>
+        <li> <a href="">OpenMV H7 Camera Mount for CF40 Viewports</a></li>
+      </ol>
+
+
+
+    <h3><a href="">Total Bill of Materials</a> (updated Nov 29 2021)</h3>
+
+
+
+  </div>
+
+
+
   <!--  -->
 </div>
 
