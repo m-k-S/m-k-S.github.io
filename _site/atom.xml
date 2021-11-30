@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>MKSA</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2021-11-29T19:14:17-05:00</updated>
- <id>http://localhost:4000</id>
+ <link href="/atom.xml" rel="self"/>
+ <link href="/"/>
+ <updated>2021-11-29T19:21:45-05:00</updated>
+ <id></id>
  <author>
    <name>Max Shirokawa</name>
    <email></email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>Introduction to Atomic Trapping</title>
-   <link href="http://localhost:4000/2021/10/13/intro-to-atomic-trapping/"/>
+   <link href="/2021/10/13/intro-to-atomic-trapping/"/>
    <updated>2021-10-13T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2021/10/13/intro-to-atomic-trapping</id>
+   <id>/2021/10/13/intro-to-atomic-trapping</id>
    <content type="html">&lt;h1 id=&quot;what-is-atomic-physics&quot;&gt;What is Atomic Physics?&lt;/h1&gt;
 
 &lt;p&gt;The taxonomy of scientific disciplines is often arcane and unintuitive, and physics is no exception. When one hears the phrase ‘atomic physics’, they might be tempted to assume some relationship to ‘nuclear physics’ – after all, what is an atom but a nucleus with bound electrons? Yet these two fields could hardly be more distinct, sharing entirely separate histories, techniques, and applications.&lt;/p&gt;
