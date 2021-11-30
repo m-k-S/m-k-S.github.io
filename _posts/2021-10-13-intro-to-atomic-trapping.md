@@ -10,7 +10,7 @@ The taxonomy of scientific disciplines is often arcane and unintuitive, and phys
 The theory of atomic physics typically considers individual atoms in isolation. In the early 20th century, this posed a seemingly insurmountable practical challenge – by what methods could one experimentally isolate an atom, so that those theories could be verified and further developed? At standard temperature and pressure, even relatively heavy atoms in gaseous form, such as xenon, travel at over 200 meters per second, rendering existing observational tools at the time useless for studying them. It was not until the late 1980s (more than 30 years after the development of the atomic bomb, a major breakthrough of nuclear science!), when Bell Labs scientists William Phillips, Claude Cohen-Tannoudji, David Pritchard, and Steven Chu (among others) designed and fabricated the first apparatus for slowing and controlling ensembles of atoms in a gaseous or vapor form – the **magneto-optical trap**. This signaled a turning point in the study of atoms; for the first time, scientists could now create gases of atoms slow enough to be studied by conventional (e.g. spectroscopic) methods.
 
 <figure style="float: right; margin-left: 20px; width:40%; height:auto;">
-<img src="{{site.baseurl}}static/projects/mot/tweezers.png"/>
+<img src="{{site.url}}/static/projects/mot/tweezers.png"/>
      <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">A cartoon depiction of optical tweezers</figcaption>
 </figure>
 
@@ -23,7 +23,7 @@ Nowadays, the magneto-optical trap (henceforth ‘MOT’) is ubiquitous in atomi
   margin-right: auto;
   width: 70%;">
   <!-- width:600px; height:auto;"> -->
-<img src="{{site.baseurl}}static/projects/mot/mot.jpg"/>
+<img src="{{site.url}}/static/projects/mot/mot.jpg"/>
      <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">A modern magneto-optical trap used as the foundation for an atomic quantum computer</figcaption>
 </figure>
 
