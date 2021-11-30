@@ -5,7 +5,7 @@ title: Introduction to Atomic Trapping
 
 # What is Atomic Physics?
 
-The taxonomy of scientific disciplines is often arcane and unintuitive, and physics is no exception. When one hears the phrase ‘atomic physics’, they might be tempted to assume some relationship to ‘nuclear physics’ – after all, what is an atom but a nucleus with bound electrons? Yet these two fields could hardly be more distinct, sharing entirely separate histories, techniques, and applications.
+The taxonomy of scientific disciplines is often arcane and unintuitive, and physics is no exception. When one hears the phrase ‘atomic physics’, they might be tempted to assume some relationship to ‘nuclear physics’ – after all, what is an atom but a nucleus with bound electrons? Yet these two fields could hardly be more distinct, having entirely separate histories, techniques, and applications.
 
 The theory of atomic physics typically considers individual atoms in isolation. In the early 20th century, this posed a seemingly insurmountable practical challenge – by what methods could one experimentally isolate an atom, so that those theories could be verified and further developed? At standard temperature and pressure, even relatively heavy atoms in gaseous form, such as xenon, travel at over 200 meters per second, rendering existing observational tools at the time useless for studying them. It was not until the late 1980s (more than 30 years after the development of the atomic bomb, a major breakthrough of nuclear science!), when Bell Labs scientists William Phillips, Claude Cohen-Tannoudji, David Pritchard, and Steven Chu (among others) designed and fabricated the first apparatus for slowing and controlling ensembles of atoms in a gaseous or vapor form – the **magneto-optical trap**. This signaled a turning point in the study of atoms; for the first time, scientists could now create gases of atoms slow enough to be studied by conventional (e.g. spectroscopic) methods.
 
@@ -57,7 +57,7 @@ As Einstein theorized in the early 20th century, light is [**quantized**](https:
 
 **FIGURE: ELECTRON DECAY DIAGRAM WITH ENERGY LEVELS**
 
-These levels, at first glace, appear to be separated by fixed, definite amounts of energy, and therefore one might expect that a photon must have some exact energy for the atom to absorb it. However, due to [time-energy uncertainty](https://math.ucr.edu/home/baez/uncertainty.html), this is actually not the case; there is an ‘uncertainty’ inherent in the energy of the excited electronic state, which we denote the **line width** of the atomic transition. Moreover, by the time-energy uncertainty relation, the wider this line width is, the shorter the lifetime of the excited state (before it decays back to the original state), and vice versa.
+These levels, at first glance, appear to be separated by fixed, definite amounts of energy, and therefore one might expect that a photon must have some exact energy for the atom to absorb it. However, due to [time-energy uncertainty](https://math.ucr.edu/home/baez/uncertainty.html), this is actually not the case; there is an ‘uncertainty’ inherent in the energy of the excited electronic state, which we denote the **line width** of the atomic transition. Moreover, by the time-energy uncertainty relation, the wider this line width is, the shorter the lifetime of the excited state (before it decays back to the original state), and vice versa.
 
 **FIGURE: LINE WIDTH**
 
