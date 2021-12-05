@@ -4,7 +4,7 @@
  <title>MKSA</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2021-11-29T19:42:38-05:00</updated>
+ <updated>2021-12-05T00:50:18-05:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Max Shirokawa</name>
@@ -19,7 +19,7 @@
    <id>http://localhost:4000/2021/10/13/intro-to-atomic-trapping</id>
    <content type="html">&lt;h1 id=&quot;what-is-atomic-physics&quot;&gt;What is Atomic Physics?&lt;/h1&gt;
 
-&lt;p&gt;The taxonomy of scientific disciplines is often arcane and unintuitive, and physics is no exception. When one hears the phrase ‘atomic physics’, they might be tempted to assume some relationship to ‘nuclear physics’ – after all, what is an atom but a nucleus with bound electrons? Yet these two fields could hardly be more distinct, sharing entirely separate histories, techniques, and applications.&lt;/p&gt;
+&lt;p&gt;The taxonomy of scientific disciplines is often arcane and unintuitive, and physics is no exception. When one hears the phrase ‘atomic physics’, they might be tempted to assume some relationship to ‘nuclear physics’ – after all, what is an atom but a nucleus with bound electrons? Yet these two fields could hardly be more distinct, having entirely separate histories, techniques, and applications.&lt;/p&gt;
 
 &lt;p&gt;The theory of atomic physics typically considers individual atoms in isolation. In the early 20th century, this posed a seemingly insurmountable practical challenge – by what methods could one experimentally isolate an atom, so that those theories could be verified and further developed? At standard temperature and pressure, even relatively heavy atoms in gaseous form, such as xenon, travel at over 200 meters per second, rendering existing observational tools at the time useless for studying them. It was not until the late 1980s (more than 30 years after the development of the atomic bomb, a major breakthrough of nuclear science!), when Bell Labs scientists William Phillips, Claude Cohen-Tannoudji, David Pritchard, and Steven Chu (among others) designed and fabricated the first apparatus for slowing and controlling ensembles of atoms in a gaseous or vapor form – the &lt;strong&gt;magneto-optical trap&lt;/strong&gt;. This signaled a turning point in the study of atoms; for the first time, scientists could now create gases of atoms slow enough to be studied by conventional (e.g. spectroscopic) methods.&lt;/p&gt;
 
@@ -51,15 +51,9 @@
 
 &lt;p&gt;A &lt;a href=&quot;https://en.wikipedia.org/wiki/Magnetic_trap_(atoms)&quot;&gt;magnetic trap&lt;/a&gt; works by creating an energy minima in a region of space through the interaction of the magnetic dipole with the external magnetic field. The spatial energy shift is given by:&lt;/p&gt;
 
-\[\Delta E =- \vec{\mu} \cdot \vec{B}\]
+\[\Delta E(\vec{r}) =- \vec{\mu} \cdot \vec{B}(\vec{r})\]
 
-&lt;p&gt;where \(\vec{\mu}\) is the magnetic dipole moment and \(\vec{B}\) is the magnetic field vector.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;FIGURE: ENERGY DIAGRAM&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This creates a potential energy valley, in which an atom is ‘incentivized’ to be at the trough. However, analogously to classical mechanics, a ball rolling in a valley may ‘escape’ that valley if its kinetic energy is higher than the potential energy difference between the trough and peak of the valley. And, as mentioned earlier, atoms in gaseous or vapor form at room temperature and pressure move extremely fast – between this fact, and the relatively small magnetic dipole moment of neutral atoms, it would take an impractically strong magnetic field to trap room-temperature neutral atoms.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;FIGURE: ENERGY DIAGRAM ANIMATION&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;where \(\vec{\mu}\) is the magnetic dipole moment and \(\vec{B}\) is the magnetic field vector. This creates a potential energy well, in which an atom, after equilibrating, would be found at the trough. However, analogously to classical mechanics, a ball rolling in a well may ‘escape’ that well if its kinetic energy is higher than the potential energy difference between the trough and peak of the valley. And, as mentioned earlier, atoms in gaseous or vapor form at room temperature and pressure move extremely fast – between this fact, and the relatively small magnetic dipole moment of neutral atoms, it would take an impractically strong magnetic field to trap room-temperature neutral atoms.&lt;/p&gt;
 
 &lt;p&gt;However, if the kinetic energy of the atoms were to be reduced, then at some point, we could use a reasonably large magnetic field to create a shift in energy sufficient enough to trap said atoms in a desired region of space. This is where the other half of the MOT comes in – the optics.&lt;/p&gt;
 
@@ -67,13 +61,19 @@
 
 &lt;h3 id=&quot;electron-excitation&quot;&gt;Electron Excitation&lt;/h3&gt;
 
+&lt;figure style=&quot;float: right; margin-left: 20px; width:40%; height:auto;&quot;&gt;
+&lt;img src=&quot;http://localhost:4000/static/projects/mot/lithium.png&quot; /&gt;
+     &lt;figcaption style=&quot;text-align:center; font-size: 13px; margin-top:-15px;&quot;&gt;Some of the electronic energy levels of lithium&lt;/figcaption&gt;
+&lt;/figure&gt;
+
 &lt;p&gt;As Einstein theorized in the early 20th century, light is &lt;a href=&quot;https://en.wikipedia.org/wiki/Photon&quot;&gt;&lt;strong&gt;quantized&lt;/strong&gt;&lt;/a&gt;, i.e. light waves are made up of individual particles known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Photon&quot;&gt;photons&lt;/a&gt;. Atoms interact with light through their bound electrons, in a process during which an electron may absorb a photon and gain that photon’s energy. This process is known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Electron_excitation&quot;&gt;&lt;strong&gt;electron excitation&lt;/strong&gt;&lt;/a&gt;, and has a reciprocal process known as &lt;strong&gt;electron decay&lt;/strong&gt;, in which an ‘excited’ electron may re-emit the photon it absorbed, and lose that photon’s energy.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;FIGURE: ELECTRON DECAY DIAGRAM WITH ENERGY LEVELS&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;These levels, at first glance, appear to be separated by fixed, definite amounts of energy, and therefore one might expect that a photon must have some exact energy for the atom to absorb it. However, due to &lt;a href=&quot;https://math.ucr.edu/home/baez/uncertainty.html&quot;&gt;time-energy uncertainty&lt;/a&gt;, this is actually not the case; there is an ‘uncertainty’ inherent in the energy of the excited electronic state, which we denote the &lt;strong&gt;line width&lt;/strong&gt; of the atomic transition. Moreover, by the time-energy uncertainty relation, the wider this line width is, the shorter the lifetime of the excited state (before it decays back to the original state), and vice versa.&lt;/p&gt;
 
-&lt;p&gt;These levels, at first glace, appear to be separated by fixed, definite amounts of energy, and therefore one might expect that a photon must have some exact energy for the atom to absorb it. However, due to &lt;a href=&quot;https://math.ucr.edu/home/baez/uncertainty.html&quot;&gt;time-energy uncertainty&lt;/a&gt;, this is actually not the case; there is an ‘uncertainty’ inherent in the energy of the excited electronic state, which we denote the &lt;strong&gt;line width&lt;/strong&gt; of the atomic transition. Moreover, by the time-energy uncertainty relation, the wider this line width is, the shorter the lifetime of the excited state (before it decays back to the original state), and vice versa.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;FIGURE: LINE WIDTH&lt;/strong&gt;&lt;/p&gt;
+&lt;figure style=&quot;float: right; margin-left: 20px; margin-top: 20px; width:40%; height:auto;&quot;&gt;
+&lt;img src=&quot;http://localhost:4000/static/projects/mot/rb_linewidth.jpg&quot; /&gt;
+     &lt;figcaption style=&quot;text-align:center; font-size: 13px; margin-top:-15px;&quot;&gt;Line widths for four of the atomic transitions of rubidium&lt;/figcaption&gt;
+&lt;/figure&gt;
 
 &lt;p&gt;The line width of an atomic transition tells us what range of frequencies / wavelengths our laser has to be within to be able to excite the electrons in the atoms we’re shining it on. For an atom such as Rubidium-87, and a typical transition we might be interested in, such as the \(5^2 S_{1/2} \to 5^2 P_{3/2}\) (a ground state to a ‘first’ excited state) transition, this line width would be around ~38 MHz, which corresponds to a range of tens of &lt;em&gt;femtometers&lt;/em&gt; in terms of wavelength. In other words, if we want to shine a laser on a Rubidium-87 atom such that it will absorb photons and undergo this transition, we need to make sure that our laser has a wavelength no more than about 40 femtometers from the central transition wavelength of 780,241,209 femtometers. The construction of such a laser is one of the biggest challenges in creating an atomic trap.&lt;/p&gt;
 
@@ -83,9 +83,16 @@
 
 &lt;p&gt;The answer arises from the interaction between electronic excitation and the relativistic Doppler effect. You may be familiar with the aural Doppler effect, in which sounds being emitted by an object moving towards you are heard at a higher pitch, and then drop to a lower pitch as the object moves away from you. In short, the effect here is a shift of the wave to a higher frequency when it is approaching you; this occurs for light in a very similar way to sound.&lt;/p&gt;
 
-&lt;p&gt;In an atomic trap, an atom that is moving towards a photon from our laser will ‘see’ the photon as having a higher frequency (and therefore, energy) as we see it in the laboratory frame. Therefore, if we tune our laser so that its frequency is slightly below the resonant frequency, the only atoms that will be excited by our laser are the ones that are moving towards it, due to this Doppler effect.&lt;/p&gt;
+&lt;figure style=&quot;display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;&quot;&gt;
+  &lt;!-- width:600px; height:auto;&quot;&gt; --&gt;
+&lt;img src=&quot;http://localhost:4000/static/projects/mot/doppler.gif&quot; /&gt;
+     &lt;figcaption style=&quot;text-align:center; font-size: 13px; margin-top:-15px;&quot;&gt;An animation of the Doppler effect on sound waves. As the vehicle moves to the left, the waves traveling in the same direction are compressed and those traveling away are lengthened.&lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;&lt;strong&gt;DOPPLER EFFECT GIF&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In an atomic trap, an atom that is moving towards a photon from our laser will ‘see’ the photon as having a higher frequency (and therefore, energy) as we see it in the laboratory frame. Therefore, if we tune our laser so that its frequency is slightly below the resonant frequency, the only atoms that will be excited by our laser are the ones that are moving towards it, due to this Doppler effect.&lt;/p&gt;
 
 &lt;p&gt;These excited atoms will eventually decay back down to their ground state. When they do so, they can re-emit the photon they absorbed in any random direction. If they emit the photon in the exact same direction as it was traveling when it was absorbed, then by conservation of momentum, there will be no net change in the velocity of the atom. However, if it emits the photon in any other direction, there will be a net slowing effect on that atom (again, due to conservation of momentum).&lt;/p&gt;
 

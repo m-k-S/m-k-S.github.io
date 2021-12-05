@@ -47,21 +47,23 @@ However, if the kinetic energy of the atoms were to be reduced, then at some poi
 
 ### Electron Excitation
 
-As Einstein theorized in the early 20th century, light is [**quantized**](https://en.wikipedia.org/wiki/Photon), i.e. light waves are made up of individual particles known as [photons](https://en.wikipedia.org/wiki/Photon). Atoms interact with light through their bound electrons, in a process during which an electron may absorb a photon and gain that photon’s energy. This process is known as [**electron excitation**](https://en.wikipedia.org/wiki/Electron_excitation), and has a reciprocal process known as **electron decay**, in which an ‘excited’ electron may re-emit the photon it absorbed, and lose that photon’s energy.
-
 <figure style="float: right; margin-left: 20px; width:40%; height:auto;">
 <img src="{{site.url}}/static/projects/mot/lithium.png"/>
      <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">Some of the electronic energy levels of lithium</figcaption>
 </figure>
 
+As Einstein theorized in the early 20th century, light is [**quantized**](https://en.wikipedia.org/wiki/Photon), i.e. light waves are made up of individual particles known as [photons](https://en.wikipedia.org/wiki/Photon). Atoms interact with light through their bound electrons, in a process during which an electron may absorb a photon and gain that photon’s energy. This process is known as [**electron excitation**](https://en.wikipedia.org/wiki/Electron_excitation), and has a reciprocal process known as **electron decay**, in which an ‘excited’ electron may re-emit the photon it absorbed, and lose that photon’s energy.
+
 These levels, at first glance, appear to be separated by fixed, definite amounts of energy, and therefore one might expect that a photon must have some exact energy for the atom to absorb it. However, due to [time-energy uncertainty](https://math.ucr.edu/home/baez/uncertainty.html), this is actually not the case; there is an ‘uncertainty’ inherent in the energy of the excited electronic state, which we denote the **line width** of the atomic transition. Moreover, by the time-energy uncertainty relation, the wider this line width is, the shorter the lifetime of the excited state (before it decays back to the original state), and vice versa.
 
-<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
-<img src="{{site.url}}/static/projects/mot/rb_linewidth.png"/>
+<figure style="float: right; margin-left: 20px; margin-top: 20px; width:40%; height:auto;">
+<img src="{{site.url}}/static/projects/mot/rb_linewidth.jpg"/>
      <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">Line widths for four of the atomic transitions of rubidium</figcaption>
 </figure>
 
 The line width of an atomic transition tells us what range of frequencies / wavelengths our laser has to be within to be able to excite the electrons in the atoms we’re shining it on. For an atom such as Rubidium-87, and a typical transition we might be interested in, such as the $$5^2 S_{1/2} \to 5^2 P_{3/2}$$ (a ground state to a ‘first’ excited state) transition, this line width would be around ~38 MHz, which corresponds to a range of tens of *femtometers* in terms of wavelength. In other words, if we want to shine a laser on a Rubidium-87 atom such that it will absorb photons and undergo this transition, we need to make sure that our laser has a wavelength no more than about 40 femtometers from the central transition wavelength of 780,241,209 femtometers. The construction of such a laser is one of the biggest challenges in creating an atomic trap.
+
+
 
 ### Doppler Cooling
 
@@ -69,12 +71,18 @@ Let’s assume we have a tunable laser with a sufficiently narrow bandwidth. How
 
 The answer arises from the interaction between electronic excitation and the relativistic Doppler effect. You may be familiar with the aural Doppler effect, in which sounds being emitted by an object moving towards you are heard at a higher pitch, and then drop to a lower pitch as the object moves away from you. In short, the effect here is a shift of the wave to a higher frequency when it is approaching you; this occurs for light in a very similar way to sound.
 
+<figure style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;">
+  <!-- width:600px; height:auto;"> -->
+<img src="{{site.url}}/static/projects/mot/doppler.gif"/>
+     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">An animation of the Doppler effect on sound waves. As the vehicle moves to the left, the waves traveling in the same direction are compressed and those traveling away are lengthened.</figcaption>
+</figure>
+
 In an atomic trap, an atom that is moving towards a photon from our laser will ‘see’ the photon as having a higher frequency (and therefore, energy) as we see it in the laboratory frame. Therefore, if we tune our laser so that its frequency is slightly below the resonant frequency, the only atoms that will be excited by our laser are the ones that are moving towards it, due to this Doppler effect.
 
-<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
-<img src="{{site.url}}/static/projects/mot/doppler.gif"/>
-     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;"></figcaption>
-</figure>
+
 
 These excited atoms will eventually decay back down to their ground state. When they do so, they can re-emit the photon they absorbed in any random direction. If they emit the photon in the exact same direction as it was traveling when it was absorbed, then by conservation of momentum, there will be no net change in the velocity of the atom. However, if it emits the photon in any other direction, there will be a net slowing effect on that atom (again, due to conservation of momentum).
 
