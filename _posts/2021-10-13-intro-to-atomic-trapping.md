@@ -37,15 +37,9 @@ Since (non-ionized) atoms are inherently ‘neutral’ (having just as many elec
 
 A [magnetic trap](https://en.wikipedia.org/wiki/Magnetic_trap_(atoms)) works by creating an energy minima in a region of space through the interaction of the magnetic dipole with the external magnetic field. The spatial energy shift is given by:
 
-$$\Delta E =- \vec{\mu} \cdot \vec{B}$$
+$$\Delta E(\vec{r}) =- \vec{\mu} \cdot \vec{B}(\vec{r})$$
 
-where $$\vec{\mu}$$ is the magnetic dipole moment and $$\vec{B}$$ is the magnetic field vector.
-
-**FIGURE: ENERGY DIAGRAM**
-
-This creates a potential energy valley, in which an atom is ‘incentivized’ to be at the trough. However, analogously to classical mechanics, a ball rolling in a valley may ‘escape’ that valley if its kinetic energy is higher than the potential energy difference between the trough and peak of the valley. And, as mentioned earlier, atoms in gaseous or vapor form at room temperature and pressure move extremely fast – between this fact, and the relatively small magnetic dipole moment of neutral atoms, it would take an impractically strong magnetic field to trap room-temperature neutral atoms.
-
-**FIGURE: ENERGY DIAGRAM ANIMATION**
+where $$\vec{\mu}$$ is the magnetic dipole moment and $$\vec{B}$$ is the magnetic field vector. This creates a potential energy well, in which an atom, after equilibrating, would be found at the trough. However, analogously to classical mechanics, a ball rolling in a well may ‘escape’ that well if its kinetic energy is higher than the potential energy difference between the trough and peak of the valley. And, as mentioned earlier, atoms in gaseous or vapor form at room temperature and pressure move extremely fast – between this fact, and the relatively small magnetic dipole moment of neutral atoms, it would take an impractically strong magnetic field to trap room-temperature neutral atoms.
 
 However, if the kinetic energy of the atoms were to be reduced, then at some point, we could use a reasonably large magnetic field to create a shift in energy sufficient enough to trap said atoms in a desired region of space. This is where the other half of the MOT comes in – the optics.
 
@@ -55,11 +49,17 @@ However, if the kinetic energy of the atoms were to be reduced, then at some poi
 
 As Einstein theorized in the early 20th century, light is [**quantized**](https://en.wikipedia.org/wiki/Photon), i.e. light waves are made up of individual particles known as [photons](https://en.wikipedia.org/wiki/Photon). Atoms interact with light through their bound electrons, in a process during which an electron may absorb a photon and gain that photon’s energy. This process is known as [**electron excitation**](https://en.wikipedia.org/wiki/Electron_excitation), and has a reciprocal process known as **electron decay**, in which an ‘excited’ electron may re-emit the photon it absorbed, and lose that photon’s energy.
 
-**FIGURE: ELECTRON DECAY DIAGRAM WITH ENERGY LEVELS**
+<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
+<img src="{{site.url}}/static/projects/mot/lithium.png"/>
+     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">Some of the electronic energy levels of lithium</figcaption>
+</figure>
 
 These levels, at first glance, appear to be separated by fixed, definite amounts of energy, and therefore one might expect that a photon must have some exact energy for the atom to absorb it. However, due to [time-energy uncertainty](https://math.ucr.edu/home/baez/uncertainty.html), this is actually not the case; there is an ‘uncertainty’ inherent in the energy of the excited electronic state, which we denote the **line width** of the atomic transition. Moreover, by the time-energy uncertainty relation, the wider this line width is, the shorter the lifetime of the excited state (before it decays back to the original state), and vice versa.
 
-**FIGURE: LINE WIDTH**
+<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
+<img src="{{site.url}}/static/projects/mot/rb_linewidth.png"/>
+     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">Line widths for four of the atomic transitions of rubidium</figcaption>
+</figure>
 
 The line width of an atomic transition tells us what range of frequencies / wavelengths our laser has to be within to be able to excite the electrons in the atoms we’re shining it on. For an atom such as Rubidium-87, and a typical transition we might be interested in, such as the $$5^2 S_{1/2} \to 5^2 P_{3/2}$$ (a ground state to a ‘first’ excited state) transition, this line width would be around ~38 MHz, which corresponds to a range of tens of *femtometers* in terms of wavelength. In other words, if we want to shine a laser on a Rubidium-87 atom such that it will absorb photons and undergo this transition, we need to make sure that our laser has a wavelength no more than about 40 femtometers from the central transition wavelength of 780,241,209 femtometers. The construction of such a laser is one of the biggest challenges in creating an atomic trap.
 
@@ -71,7 +71,10 @@ The answer arises from the interaction between electronic excitation and the rel
 
 In an atomic trap, an atom that is moving towards a photon from our laser will ‘see’ the photon as having a higher frequency (and therefore, energy) as we see it in the laboratory frame. Therefore, if we tune our laser so that its frequency is slightly below the resonant frequency, the only atoms that will be excited by our laser are the ones that are moving towards it, due to this Doppler effect.
 
-**DOPPLER EFFECT GIF**
+<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
+<img src="{{site.url}}/static/projects/mot/doppler.gif"/>
+     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;"></figcaption>
+</figure>
 
 These excited atoms will eventually decay back down to their ground state. When they do so, they can re-emit the photon they absorbed in any random direction. If they emit the photon in the exact same direction as it was traveling when it was absorbed, then by conservation of momentum, there will be no net change in the velocity of the atom. However, if it emits the photon in any other direction, there will be a net slowing effect on that atom (again, due to conservation of momentum).
 
