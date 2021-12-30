@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      The Monochromatic Laser &middot; MKSA
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://localhost:4000/public/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="http://localhost:4000/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-205C198YLS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-205C198YLS');
+  </script>
+</head>
+
+
+  <body>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="http://localhost:4000">
+          MKSA
+        </a>
+      </h1>
+      <!-- <p class="lead"></p> -->
+      <img src="http://localhost:4000/public/me_and_haas.jpg" style="max-height: 50vh; width: auto; display: block;">
+    </div>
+
+    <nav class="sidebar-nav">
+      
+
+      <a>
+        I am a security engineer, computer science researcher, and amateur physicist.
+        This site serves as a repository for my personal projects, which encompass industrial design,
+        experimental physics, light as an art medium, electronic musical instruments, and more.
+        I am a strong advocate for open-source technology and improving the accessibility of science.
+        Please feel free to reach out regarding any of my work.
+      </a>
+
+    </nav>
+
+    <p class="sidebar-footer" style="position:absolute; bottom:0; width:100%; font-size: 0.5rem;">
+      <a style="font-size:25px; position: center;">
+        <a href="https://twitter.com/m_shirokawa" class="icon-block" style="font-size:25px;">
+          <i class="fa fa-twitter" style="color:#ADD8E6;"></i>
+        </a>
+        <a href="https://github.com/m-k-S" class="icon-block" style="font-size:25px; padding-left:8px;">
+          <i class="fa fa-github" style="color:#FFFFFF;"></i>
+        </a>
+        <a href="https://incoherent.substack.com/" class="icon-block" style="font-size:25px; padding-left:8px; color:#FFD580;">
+          <i class="fa fa-rss"></i>
+        </a>
+      </a>
+
+      <br><br>
+      &copy; 2021. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title" style="font-size: 4rem;">The Monochromatic Laser</h1>
+  <!-- <span class="post-date">14 Oct 2021</span> -->
+  <h1 id="photon-absorption">Photon Absorption</h1>
+
+<p>The fundamental phenomenon that enables precise control, cooling, and trapping of neutral atoms is the excitation of bound electrons through the absorption of photons. <a href="/2021/10/13/intro-to-atomic-trapping/">As discussed previously</a>, exciting an electron to a higher energy state requires the absorption of a photon within a very specific range of frequencies/energies. This range is known as the <em>line width</em> of an atomic transition.</p>
+
+<p>A discussion of the line width of atomic transitions is ubiquitous in atomic physics texts, such as <a href="https://books.google.com/books/about/Atomic_Physics.html?id=kXYpAQAAMAAJ">C.J. Foot</a> or <a href="https://books.google.com/books/about/Modern_Atomic_Physics.html?id=b5K9BwAAQBAJ">Vasant Natarajan</a>. In essence, these derivations show how the transition rate of an atom varies with respect to the frequency of incident light, which is typically a Lorentzian distribution centered at the resonant frequency of the transition.</p>
+
+<p>ABSORPTION DIAGRAM IMAGE</p>
+
+<p>Following this, typical treatments of the radiation pressure force (the ‘pressure’ exerted on an atom by the absorption and emission of incident photons) tend to assume that the frequency of incident light can be tuned arbitrarily close to this resonant frequency, so that the transition rate is maximized. However, in practice, it is exceedingly difficult to create a light source that is truly monochromatic, i.e. that emits a <em>single</em> stable frequency of light.</p>
+
+<p>The most common form of light source used in magneto-optical trapping is the <em>laser</em>, as they are coherent sources of photons and are spatially precise. There are many variants of lasers, e.g. diode lasers, gas lasers, diode-pumped solid-state lasers, and so on. All of these variants are subject to <em>frequency drift</em>, i.e. the frequency of photons that these lasers emit changes stochastically as a function of time due to random fluctuations.</p>
+
+<p>A popular choice in the construction of MOTs is the diode laser, as they are relatively inexpensive, and the process of stabilizing their emitted frequency is well-studied. In particular, diode lasers are often stabilized with the addition of an external cavity and a diffraction grating that allows for the fine-tuning of the output frequency of light so that the laser can remain within the line width of the desired atomic transition. These apparatus are known as <strong>external cavity diode lasers</strong> (ECDL), and are <a href="https://www.worldscientific.com/worldscibooks/10.1142/5694">arguably the most common tools in an atomic physics lab</a>.</p>
+
+<h1 id="external-cavity-diode-lasers">External Cavity Diode Lasers</h1>
+
+<h2 id="optical-configurations">Optical Configurations</h2>
+
+<h3 id="littrow-ecdl">Littrow ECDL</h3>
+
+<p>There are a variety of configurations for external cavity diode lasers presented in the literature. The simplest, and thus most common, is the <strong>Littrow ECDL</strong>, depicted in the figure to the right. The laser diode is directed at a <a href="https://en.wikipedia.org/wiki/Blazed_grating"><strong>blazed diffraction grating</strong></a> (e.g. Thorlabs GR13-0608, $70) in the external cavity, which diffracts the light and thus alters its wavelength.</p>
+
+<p>FIGURE: LITTROW ECDL</p>
+
+<p>In particular, the wavelength of light after diffraction is given by the well-known optical equation:</p>
+
+\[n \lambda = d(\sin \theta + \sin \theta')\]
+
+<p>where \(n\) is the order of diffraction, \(\lambda\) is the diffracted wavelength, \(d\) is the grating constant (distance between grooves), \(\theta\) is incident angle of the diode with respect to the diffraction grating (i.e. the angle with the unit normal of the grating), and \(\theta'\) is exit angle of the diffracted beam.</p>
+
+<p>In the Littrow ECDL configuration, \(\theta = \theta'\), so this reduces to:</p>
+
+\[n \lambda = 2d \sin \theta\]
+
+<p>The motivation for such a configuration is due to the nature of stimulated emission of photons. In particular, when we direct our laser diode at the blazed diffraction grating at some angle \(\theta\), thereby generating first-order diffracted light at a wavelength \(\lambda\), some of that diffracted light will be reflected back into the diode. Within the gain medium of the diode, that diffracted light will serve to amplify the emission of light at the diffracted wavelength. Therefore, if we want our laser to output light sharply peaked at some wavelength \(\lambda^\ast\), we simply mount the diffraction grating at an incident angle of \(\theta^\ast = \arcsin \frac{\lambda^\ast}{2d}\), which will amplify the emission of light at the wavelength \(\lambda^\ast\) as desired.</p>
+
+<p>To control the incident angle onto the diffraction grating, we use a <strong>piezoelectric actuator</strong> (e.g. Thorlabs PK4FA2P1, $52) mounted behind a lever arm, which holds the grating. As the actuator expands, it pushes the lever arm, changing the diffraction angle slightly. An actuator with a maximum travel length of \(10 \mu m\) to \(20 \mu m\) is generally sufficient to sweep through the range of angles that will allow an experimentalist to lock the output of their ECDL to the desired frequency.</p>
+
+<p>For rubidium-87, the <a href="https://steck.us/alkalidata/rubidium87numbers.1.6.pdf">canonical ‘cooling transition’ has a resonant wavelength \(780.241209\) nm (in vacuum)</a>. Therefore, if we had a grating with 1800 grooves per mm, and wanted to be exactly on resonance, we would choose:</p>
+
+\[\theta = \arcsin \frac{780.241209 \text{nm}}{\frac{2}{1800} \text{grooves/mm}} = 44.6031975^\circ\]
+
+<p>FIGURE: DIODE MOUNT</p>
+
+<p>Additionally, as depicted in the Littrow diagram above, the output beam of the diode must be collimated as it is emitted, via some beam limiting device (e.g. Laser-Makers 16mm beam collimator, $10). This is because most laser diodes produce inherently divergent beams, and too much power would be lost from this beam divergence to eventually be useful downstream in the experiment. Figure \ref{fig:diodemount}, above, depicts a diode mount. The empty cavity in front of the diode is left for a beam collimator; 4-6mm of threading is given to adjust the collimator back and forth on the same optical axis as the laser diode, so that the collimation can be adjusted as needed.</p>
+
+<p>One disadvantage specific to the Littrow ECDL is that the output beam direction varies as the frequency is tuned. For tasks requiring highly precise beam alignment, this may have unwanted consequences in the downstream application. A similar configuration using a blazed diffraction grating known as the <strong>Littman-Metcalf</strong> ECDL obviates this issue by using a rotating mirror to select the output frequency (rather than rotating the grating itself). However, this configuration suffers from a relatively low power output as compared to the Littrow configuration.</p>
+
+<h3 id="cateye-ecdl">‘Cateye’ ECDL</h3>
+
+<p>The ‘cateye’, or ‘interference filter’ ECDL is an alternative configuration that utilizes an <a href="https://en.wikipedia.org/wiki/Interference_filter">interference filter</a> for frequency selection, as opposed to the phenomenon of diffraction. In particular, a rotating interference filter is placed in front of the laser diode; as the filter is rotated, the incident light undergoes multiple reflections within the filter’s dielectric coatings, and behaves essentially as a thin Fabry-Perot etalon. The transmitted wavelength is given by:</p>
+
+\[\lambda = \lambda_{max} \sqrt{1 - \frac{\sin^2 \theta}{n_{eff}^2}}\]
+
+<p>where \(n_{eff}\) is the effective index of refraction of the filter (typically around \(2\)), \(\lambda_{max}\) is the wavelength at normal incidence, and \(\theta\) is the angle of incidence of the filter with respect to the laser beam. Once the desired frequency has been selected by adjusting the rotation of the filter, the light at that exact frequency is partially reflected back into the laser diode by using an ‘output coupler’ (partially reflecting mirror), usually with a ratio of about 30% reflection to 70% transmittance. By the same principles of stimulated emission described in the previous section, this sharply peaks the output frequency of the ECDL about the selected frequency.</p>
+
+<p>Fine control of the frequency is achieved by focusing the light using a (typically plano-convex) lens onto the output coupler mirror. The frequency can be tuned by adjusting the distance from the lens to the output coupler, typically using a piezoelectric actuator to achieve control on the nanometer scale.</p>
+
+<p>The interference filter has several</p>
+
+<h2 id="stabilization-and-electronics">Stabilization and Electronics</h2>
+
+<p>blah blah femtometer stability</p>
+
+<p>To control the ECDL in the configuration proposed above, three drivers are required: a current driver for the laser diode, a temperature controller for the Peltier device and temperature sensor, and a voltage controller for the piezo actuator. In this work, we do not cover such drivers in detail, as there are countless valid circuits for these purposes that are well-studied.</p>
+
+<p>For the purposes of our experiment, we utilize the works described in \cite{minho}, \cite{current}, and \cite{piezo}. One practical motivation for the usage of these drivers is that they are all digitally-enabled, which allows us to have end-to-end data collection and feedback on the same processor. In particular, a Teensy 3.5 digital microcontroller is used to manage the three component drivers. Figure \ref{fig:temppcb} depicts a PCB diagram for the temperature controller used in our experiment.</p>
+
+<h3 id="temperature-control">Temperature Control</h3>
+
+<p>Another key aspect to proper ECDL operation is precise control of the temperature of the laser diode \cite{tunable}. The wavelength of light that is output by a laser diode changes with respect to temperature (see \ref{fig:tempvswl}, typically because the thermal fluctuation will change the length of the internal cavity of the diode. As more current is provided to the laser diode, the temperature will rise, thereby changing the wavelength and possibly disrupting the experiment.</p>
+
+<p>Thus, ECDLs are generally assembled with some form of cooling mechanism, such as a <strong>Peltier device</strong> (a.k.a. thermoelectric cooler, e.g. CUI Devices CP60231H, $20). When used in conjunction with a thermally conductive mounting apparatus for the diode, as well as some form of heatsink, a Peltier device is able to transfer heat away from the diode.</p>
+
+<p>\begin{figure}[H]
+\centering
+\includegraphics[width=3in]{figures/Temp vs Wavelength.png}
+\caption{The variation of laser diode wavelength with respect to cavity temperature}
+\label{fig:tempvswl}
+\end{figure}</p>
+
+<p>To keep the temperature stable about a set value, experimentalists often use analog circuits, in which temperature measurements are taken by an analog sensor (e.g. Analog Devices AD590, $15), and used in conjunction with a proportional–integral–derivative loop to adjust the input current to the Peltier device such that temperature remains constant. See Figure \ref{fig:diodemount} for an example of such a configuration: the bottom plate depicted is a heatsink; the Peltier device is sandwiched between the heatsink and the bottom half of the diode mount, and a temperature sensor is inserted into the top half of the diode mount (as close to the diode as possible) to get temperature readings.</p>
+
+<p>FIGURE: TEC PCB</p>
+
+<h3 id="fine-tuning-frequency">Fine-Tuning Frequency</h3>
+
+<p>piezo control, stability, etc</p>
+
+<h3 id="optical-isolator">Optical Isolator</h3>
+
+<p>As discussed in Section \ref{sec:ecdloptics}, the mechanics of an ECDL necessarily depend on the nature of stimulated emission; specifically, the fact that light reflected back into the diode can stimulate a higher level of emission at a desired wavelength. However, this effect can also backfire, if light reflected back into the diode is not of the desired wavelength. Without proper precautions, this phenomenon can easily occur in experiments, as the light emitted by the ECDL is reflected by other optical elements in the experiment.</p>
+
+<p>The typical solution to this problem is to utilize an \textbf{optical isolator} in conjunction with the light output from the ECDL. An optical isolator is an optical element that makes use of the physical phenomenon of \textit{Faraday rotation}, or the rotation of the polarization of light within certain nonlinear crystals \cite{fischer_1987}.</p>
+
+<p>\begin{figure}[H]
+\centering
+\includegraphics[width=5.5in]{figures/isolator.png}
+\caption{Typical configuration of an optical isolator}
+\label{fig:isolator}
+\end{figure}</p>
+
+<p>Such crystals are characterized by their \textit{Verdet constant}, which is a measure of how many radians the polarization of incident light is rotated by, per meter, per Tesla. A Faraday rotator is built by placing a nonlinear crystal within a region of axial magnetic flux; as the light passes through this region, its polarization will be rotated by an angle given by:</p>
+
+\[\Delta \theta = V \beta L,\]
+
+<p>where $V$ is the Verdet constant of the crystal, $\beta$ is the axial magnitude flux in the crystal, and $L$ is the length of the crystal \cite{moller}. To create an optical isolator, then, we first place a linear polarizer (e.g. Melles Griot 03FPG009, $35) in front of such a Faraday rotator. This ensures that the light entering the Faraday rotator is uniformly polarized. Subsequently, we add a 45° polarizer (a.k.a. analyzer) after the rotator; this ensures that only the light whose polarization has been rotated by 45° can exit the isolator.</p>
+
+<p>Note that light trying to pass through the optical isolator in the opposite direction would first be polarized to an angle of 45°, and then rotated another 45° by the Faraday rotator (since the rotator is orientation-agnostic). Therefore, the light exiting the rotator in this direction would be polarized orthogonally to the linear polarizer at the other end, meaning that it will be extinguished, and no more light will be reflected back into the ECDL, as desired.</p>
+
+<p>Common choices for nonlinear crystals for use in the Faraday rotator are terbium-doped glass or terbium gallium garnet (TGG) due to their high Verdet constant. Specifically, for the 780nm transition of Rubidium, the Verdet constant of TGG is approximately 60 radians per meter-Tesla. By the above equation, then, to achieve a 45 degree rotation ($\approx 0.785$ radians), we require $\approx 0.013$ meter-Teslas.</p>
+
+<p>This can be achieved by a $15.5$mm length TGG crystal (purchasing TGG generally requires a custom order from a manufacturer; Chinese manufacturers will produce such a piece for $\sim$ $80 at the time of writing), and $19$mm of permanent toroidal magnets that generate a $.85$ Tesla axial field at their center (e.g. K&amp;J Magnetics RC44-N52 x 3, $16 and K&amp;J Magnetics R412-N52 x 6, $3).</p>
+
+<h1 id="optical-pumping">Optical ‘Pumping’</h1>
+
+<p>When we utilize the $780$nm transition of Rubidium-85 to excite atoms in the $5^2 S_{1/2}$ ground state to the $5^2 P_{3/2}$ state, this corresponds to a $F=3 \to F’=4$ transition. By angular selection rules, the $F’=4$ state must decay back into the $F=3$ state, meaning that the atoms can be immediately excited once again (and therefore cooled, via the principles of the radiation pressure force). However, due to the phenomenon of \textit{Raman scattering}, there is a possibility that Rubidium-85 atoms will end up in a hyperfine split $F=2$ state, which is `dark’ with respect to the $780$nm light \cite{rbdata}.</p>
+
+<p>More generally, all alkali elements are subject to such a phenomenon in one form or another, which typically necessitates the usage of a secondary \textbf{repumping laser} that removes atoms from this <code class="language-plaintext highlighter-rouge">dark state'. In Rb-85, this involves an excitation from the $F=2$ to the $5^2 P_{3/2}, F'=3$ state, which will then decay back down to $5^2 S_{1/2}, F=3$, the ground state, making such an atom ready for cooling cycles once again. One favorable property of this particular</code>repumping’ transition in Rb-85 is that it is very close in natural frequency to the cooling transition, being separated by only 2.9GHz. This may be compared to another alkali element, such as Potassium-40, which has a cooling transition at $405$nm and a corresponding repumping transition at $767$nm, which is a much wider gap \cite{PhysRevA.84.063420}.</p>
+
+<p>\begin{figure}[H]
+\centering
+\includegraphics[width=3.2in]{figures/rb repumping.png}
+\caption{An energy diagram depicting the cooling and repumping transition for Rubidium-85}
+\label{fig:my_label}
+\end{figure}</p>
+
+<p>We may take advantage of this property by generating a \textit{sideband} in the output beam $780$nm <code class="language-plaintext highlighter-rouge">cooling' ECDL that can access this Rb-85 repumping transition. In electromagnetic radiation, a sideband is a band of frequencies that is higher or lower than the main</code>carrier’ frequency, which arises as a result of a modulation process (e.g. voltage controlled oscillation or acousto-optical deflection). In other words, we can modulate the $780$nm diode laser such that it will simultaneously generate light at the repumping frequency, so that the experiment can be run with a single ECDL, which greatly reduces both experiment cost and complexity.</p>
+
+<h2 id="voltage-controlled-oscillators">Voltage Controlled Oscillators</h2>
+
+<p>A cheap and simple implementation of such modulation can be done via the use of a \textbf{voltage controlled oscillator}, or VCO (e.g. Avantek VTO-8240, $55). In particular, for Rb-85 repumping, a microwave oscillator whose range of oscillation is approximately centered about 2.9GHz is optimal. Due to the relatively broad ($\approx 100$ MHz) line width of the repumping transition, specific details such as harmonic vs. relaxation oscillation and noise figure are not expressly important.</p>
+
+<p>The VCO is a circuit element that can be placed in parallel with the ECDL circuit and a single additional capacitor. It is provided with a separate DC driving voltage, which controls the frequency of oscillation of the VCO. This, in turn, adds an AC voltage source to the circuit that drives the laser diode. The input current to a laser diode directly affects its cavity length, which means that this AC modulation will cause a corresponding oscillation in the output frequency of the diode (as the diode’s cavity length directly controls the output frequency of light) \cite{microwave}.</p>
+
+<p>Since the line width of the repumping transition of Rb-85 is relatively large, tuning the DC input to the VCO can be performed (once the remainder of the experiment is correctly set up) by scanning through a range of input voltages until the steady-state MOT is established.</p>
+
+<h1 id="frequency-locking">Frequency Locking</h1>
+
+<p>Because stable cooling of atoms requires precise control of the frequency of applied light, it is useful (and for robust applications, necessary) to have a method of measuring the frequency of light from our light source. In this section, we present two tools for conducting such measurements: vapor cells and Fabry-Perot interferometers.
+\subsubsection{Atomic Vapor Cells}</p>
+
+<h2 id="fabry-perot-interferometry">Fabry-Perot Interferometry</h2>
+
+<p>A \textbf{Fabry-Perot cavity} (or interferometer) is an optical device constructed with two mirrors in a variable-length tube. When operated, light is transmitted through one end of the cavity, and then is reflected back and forth between the two mirrors inside the cavity. The amount of light that is transmitted through the other end of the cavity is dependent on the length of the cavity, due to the variation in the interference patterns of the reflected light inside the cavity with respect to the length \cite{hernandez_1988}.</p>
+
+<p>In particular, after being transmitted through one end of the cavity, the incident light can either be transmitted through the other end, or reflected by the mirror at that end. If the light is reflected, and then once again reflected at the <code class="language-plaintext highlighter-rouge">entrance' to the cavity, it returns to the</code>exit’ of the cavity after some time that is dependent on the refractive index of the material inside the cavity (typically air) as well as the length of the cavity.</p>
+
+<p>\begin{figure}[H]
+\centering
+\includegraphics[width=3in]{figures/fabryperot.png}
+\caption{Dynamics of reflection and transmission in a Fabry-Perot cavity}
+\label{fig:my_label}
+\end{figure}</p>
+
+<p>If this reflected light beam is then transmitted, it has a phase difference with the initial transmitted beam that is also dependence on the cavity length and index of refraction. Specifically, if the light is incident at one end of the cavity at an angle of $\theta$, the phase difference between the first transmitted beam and the beam transmitted after two reflections is given by:</p>
+
+\[\delta = \frac{2 \pi}{\lambda} 2 n \ell \cos \theta,\]
+
+<p>where $\lambda$ is the wavelength of the incident light, $n$ is the refractive index of the cavity, and $\ell$ is the length of the cavity. Moreover, the transmittance of the cavity is given by:</p>
+
+\[T = \frac{(1-R)^{2}}{1-2 R \cos \delta+R^{2}} = \frac{1}{1 + F \sin^2 \frac{\delta}{2}},\]
+
+<p>where $R$ is the \textit{reflectance} of the mirrors, and $F = \frac{4R}{(1-R)^2}$ is the \textit{finesse}. From these equations, if we take $n=1$, we can see that transmission is maximized when $\ell \cos \theta$ is an integer multiple of the wavelength. Therefore, in practice, we direct our light source at the cavity at an angle of $\theta = 0$, tune the length using a piezoelectric actuator (identical to the one used to tune the ECDL diffraction grating), and place a photodetector at the cavity `exit’. Thus, if the initial length of the cavity is known, as we vary the length using the piezo actuator, we can determine the wavelength of the light from the photodetector readings. This can be used as an error signal that then allows us to tune the parameters that determine the frequency of our light source. (Pound-Drever-Hall)</p>
+
+<h2 id="saturated-absorption-spectroscopy">Saturated Absorption Spectroscopy</h2>
+
+<p>A reliable source of frequency measurement for ground state transitions of atoms is through the usage of \textbf{atomic vapor cells}, which are containers that heat a pure sample of a particular element until it forms a vapor. In an optical experiment, some of the light from the light source can be split off via a beam splitter, directed through such a vapor cell, and then into a photodetector.</p>
+
+<p>Since the majority of the atoms in the vapor cell will be in their ground state, if the light source is emitting at the natural frequency of the cooling transition, the atoms in the vapor cell will be excited (e.g. for Rb-85, into the $5^2 P_{3/2}$ state). Some proportion of these atoms will spontaneously decay back into the ground state; when this occurs, the emitted photon has a random direction, meaning that it may not hit the photodetector that has been placed in series with the vapor cell.</p>
+
+<p>\begin{figure}[H]
+\centering
+\includegraphics[width=6in]{figures/vaporcell.png}
+\caption{A diagram depicting the usage of an atomic vapor cell (a.k.a. reference cell}
+\label{fig:my_label}
+\end{figure}</p>
+
+<p>Therefore, when the frequency of the light source is on resonance with the cooling transition, we will see a sharp dip in the absorption measurements from the photodetector, because the light beam is not passing through the vapor straight into the photodetector at that point. This can be used as an error signal, which allows an experimentalist to more precisely tune the parameters of their light source in order to achieve a desired light frequency. <br />
+Note that atomic vapor cells can only be used as an error signal for ground state transitions, because the vapor cell will only contain atoms in their ground state, and therefore the absorption measurement will only have meaningful fluctuations for transitions that excite atoms from their ground state.</p>
+
+</div>
+
+<!-- <div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2021/10/13/intro-to-atomic-trapping/">
+            Introduction to Atomic Trapping
+            <small>13 Oct 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div> -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+
+    </div>
+
+  </body>
+</html>

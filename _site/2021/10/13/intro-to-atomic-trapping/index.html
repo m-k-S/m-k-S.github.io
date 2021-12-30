@@ -27,14 +27,14 @@
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
-  <!-- Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-205C198YLS"></script>
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-146052-15', 'getpoole.com');
-    ga('send', 'pageview');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-205C198YLS');
   </script>
 </head>
 
@@ -47,7 +47,7 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="/">
+        <a href="http://localhost:4000">
           MKSA
         </a>
       </h1>
@@ -181,11 +181,22 @@
 
 <p>Thus, to fully understand the technical details and requirements for fabricating a MOT, one must study several papers and texts on each of the various sub-systems involved and then figure out how to assemble them, which can be a confusing and painful process. This work aims to provide a ground-up overview of the necessary components of a MOT for rubidium, implementation details on typical forms for each of those components (with a particular focus on minimizing cost), and a discussion of the motivation behind such implementation details.</p>
 
+<p>The remainder of this project is organized into four sections. The first is a discussion of the source of light used to stimulate the canonical ‘cooling’ atomic transition of rubidium-87, including how to fabricate such a source, how to power and control it, the requirements that must be met, and the fundamental reasons for such requirements. The second is a discussion of the required ambient conditions for a MOT, how they can be achieved, and the motivations for such requirements. The third section is a discussion of the optical system that enables magneto-optical trapping, and how to design and implement such a system. The fourth and final section is an analysis the data collected during experimentation with my own personal build.</p>
+
 </div>
 
 <!-- <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2021/10/14/the-monochromatic-laser/">
+            The Monochromatic Laser
+            <small>14 Oct 2021</small>
+          </a>
+        </h3>
+      </li>
     
   </ul>
 </div> -->

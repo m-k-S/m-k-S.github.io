@@ -27,14 +27,14 @@
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
 
-  <!-- Google Analytics -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-205C198YLS"></script>
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-146052-15', 'getpoole.com');
-    ga('send', 'pageview');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-205C198YLS');
   </script>
 </head>
 
@@ -47,7 +47,7 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h1>
-        <a href="/">
+        <a href="http://localhost:4000">
           MKSA
         </a>
       </h1>
@@ -112,8 +112,7 @@
 
   <ol type="I">
     <li> <a href="/2021/10/13/intro-to-atomic-trapping/">Introduction to Atomic Trapping</a></li>
-    <li>An Overview of Fabrication</li>
-    <li>The Monochromatic Laser</li>
+    <li><a href="/2021/10/14/the-monochromatic-laser/">The Monochromatic Laser</a></li>
     <li>The Vacuum System</li>
     <li>Cooling Atoms</li>
     <li>Analysis</li>

@@ -22,7 +22,7 @@ A popular choice in the construction of MOTs is the diode laser, as they are rel
 
 ### Littrow ECDL
 
-There are a variety of configurations for external cavity diode lasers presented in the literature. The simplest, and thus most common, is the **Littrow ECDL**, depicted in the figure to the right. The laser diode is directed at a **blazed diffraction grating** (e.g. Thorlabs GR13-0608, $70) in the external cavity, which diffracts the light and thus alters its wavelength.
+There are a variety of configurations for external cavity diode lasers presented in the literature. The simplest, and thus most common, is the **Littrow ECDL**, depicted in the figure to the right. The laser diode is directed at a [**blazed diffraction grating**](https://en.wikipedia.org/wiki/Blazed_grating) (e.g. Thorlabs GR13-0608, $70) in the external cavity, which diffracts the light and thus alters its wavelength.
 
 FIGURE: LITTROW ECDL
 
@@ -30,21 +30,37 @@ In particular, the wavelength of light after diffraction is given by the well-kn
 
 $$n \lambda = d(\sin \theta + \sin \theta')$$
 
-where $n$ is the order of diffraction, $\lambda$ is the diffracted wavelength, $d$ is the grating constant (distance between grooves), $\theta$ is incident angle of the diode with respect to the diffraction grating (i.e. the angle with the unit normal of the grating), and $\theta'$ is exit angle of the diffracted beam.
+where $$n$$ is the order of diffraction, $$\lambda$$ is the diffracted wavelength, $$d$$ is the grating constant (distance between grooves), $$\theta$$ is incident angle of the diode with respect to the diffraction grating (i.e. the angle with the unit normal of the grating), and $$\theta'$$ is exit angle of the diffracted beam.
 
-In the Littrow ECDL configuration, $\theta = \theta'$, so this reduces to:
+In the Littrow ECDL configuration, $$\theta = \theta'$$, so this reduces to:
 
-$$$$$$n \lambda = 2d \sin \theta$$
+$$n \lambda = 2d \sin \theta$$
 
-The motivation for such a configuration is due to the nature of stimulated emission of photons. In particular, when we direct our laser diode at the blazed diffraction grating at some angle $\theta$, thereby generating first-order diffracted light at a wavelength $\lambda$, some of that diffracted light will be reflected back into the diode. Within the gain medium of the diode, that diffracted light will serve to amplify the emission of light at the diffracted wavelength. Therefore, if we want our laser to output light sharply peaked at some wavelength $\lambda^\ast$, we simply mount the diffraction grating at an incident angle of $\theta^\ast = \arcsin \frac{\lambda^\ast}{2d}$, which will amplify the emission of light at the wavelength $\lambda^\ast$ as desired.
+The motivation for such a configuration is due to the nature of stimulated emission of photons. In particular, when we direct our laser diode at the blazed diffraction grating at some angle $$\theta$$, thereby generating first-order diffracted light at a wavelength $$\lambda$$, some of that diffracted light will be reflected back into the diode. Within the gain medium of the diode, that diffracted light will serve to amplify the emission of light at the diffracted wavelength. Therefore, if we want our laser to output light sharply peaked at some wavelength $$\lambda^\ast$$, we simply mount the diffraction grating at an incident angle of $$\theta^\ast = \arcsin \frac{\lambda^\ast}{2d}$$, which will amplify the emission of light at the wavelength $$\lambda^\ast$$ as desired.
 
-To control the incident angle onto the diffraction grating, we use a **piezoelectric actuator** (e.g. Thorlabs PK4FA2P1, $52) mounted behind a lever arm, which holds the grating. As the actuator moves forward, it pushes the lever arm, changing the diffraction angle slightly. An actuator with a maximum travel length of $10 \mu m$ to $20 \mu m$ is generally sufficient to sweep through the range of angles that will allow an experimentalist to find the desired wavelength of the ECDL **LINK.**
+To control the incident angle onto the diffraction grating, we use a **piezoelectric actuator** (e.g. Thorlabs PK4FA2P1, $52) mounted behind a lever arm, which holds the grating. As the actuator expands, it pushes the lever arm, changing the diffraction angle slightly. An actuator with a maximum travel length of $$10 \mu m$$ to $$20 \mu m$$ is generally sufficient to sweep through the range of angles that will allow an experimentalist to lock the output of their ECDL to the desired frequency.
+
+For rubidium-87, the [canonical 'cooling transition' has a resonant wavelength $$780.241209$$ nm (in vacuum)](https://steck.us/alkalidata/rubidium87numbers.1.6.pdf). Therefore, if we had a grating with 1800 grooves per mm, and wanted to be exactly on resonance, we would choose:
+
+$$\theta = \arcsin \frac{780.241209 \text{nm}}{\frac{2}{1800} \text{grooves/mm}} = 44.6031975^\circ$$
 
 FIGURE: DIODE MOUNT
 
-Additionally, as depicted in the Littrow diagram above, the output beam of the diode must be collimated as it is emitted, via some beam limiting device (e.g. Laser-Makers 16mm beam collimator, $10). This is because most laser diodes produce inherently divergent beams, and too much power would be lost from this beam divergence to eventually be useful downstream in the experiment. Figure \ref{fig:diodemount}, above, depicts a diode mount. The empty cavity in front of the diode is left for a beam collimator; 4-6mm margin is given to move the collimator back and forth on the same axis as the laser diode, so that the level of collimation can be adjusted as needed.
+Additionally, as depicted in the Littrow diagram above, the output beam of the diode must be collimated as it is emitted, via some beam limiting device (e.g. Laser-Makers 16mm beam collimator, $10). This is because most laser diodes produce inherently divergent beams, and too much power would be lost from this beam divergence to eventually be useful downstream in the experiment. Figure \ref{fig:diodemount}, above, depicts a diode mount. The empty cavity in front of the diode is left for a beam collimator; 4-6mm of threading is given to adjust the collimator back and forth on the same optical axis as the laser diode, so that the collimation can be adjusted as needed.
+
+One disadvantage specific to the Littrow ECDL is that the output beam direction varies as the frequency is tuned. For tasks requiring highly precise beam alignment, this may have unwanted consequences in the downstream application. A similar configuration using a blazed diffraction grating known as the **Littman-Metcalf** ECDL obviates this issue by using a rotating mirror to select the output frequency (rather than rotating the grating itself). However, this configuration suffers from a relatively low power output as compared to the Littrow configuration.
 
 ### ‘Cateye’ ECDL
+
+The 'cateye', or 'interference filter' ECDL is an alternative configuration that utilizes an [interference filter](https://en.wikipedia.org/wiki/Interference_filter) for frequency selection, as opposed to the phenomenon of diffraction. In particular, a rotating interference filter is placed in front of the laser diode; as the filter is rotated, the incident light undergoes multiple reflections within the filter's dielectric coatings, and behaves essentially as a thin Fabry-Perot etalon. The transmitted wavelength is given by:
+
+$$\lambda = \lambda_{max} \sqrt{1 - \frac{\sin^2 \theta}{n_{eff}^2}}$$
+
+where $$n_{eff}$$ is the effective index of refraction of the filter (typically around $$2$$), $$\lambda_{max}$$ is the wavelength at normal incidence, and $$\theta$$ is the angle of incidence of the filter with respect to the laser beam. Once the desired frequency has been selected by adjusting the rotation of the filter, the light at that exact frequency is partially reflected back into the laser diode by using an 'output coupler' (partially reflecting mirror), usually with a ratio of about 30% reflection to 70% transmittance. By the same principles of stimulated emission described in the previous section, this sharply peaks the output frequency of the ECDL about the selected frequency.
+
+Fine control of the frequency is achieved by focusing the light using a (typically plano-convex) lens onto the output coupler mirror. The frequency can be tuned by adjusting the distance from the lens to the output coupler, typically using a piezoelectric actuator to achieve control on the nanometer scale.
+
+The interference filter has several
 
 ## Stabilization and Electronics
 
@@ -150,7 +166,7 @@ where $\lambda$ is the wavelength of the incident light, $n$ is the refractive i
 
 $$T = \frac{(1-R)^{2}}{1-2 R \cos \delta+R^{2}} = \frac{1}{1 + F \sin^2 \frac{\delta}{2}},$$
 
-where $R$ is the \textit{reflectance} of the mirrors, and $F = \frac{4R}{(1-R)^2}$ is the \textit{finesse}. From these equations, if we take $n=1$, we can see that transmission is maximized when $\ell \cos \theta$ is an integer multiple of the wavelength. Therefore, in practice, we direct our light source at the cavity at an angle of $\theta = 0$, tune the length using a piezoelectric actuator (identical to the one used to tune the ECDL diffraction grating), and place a photodetector at the cavity `exit'. Thus, if the initial length of the cavity is known, as we vary the length using the piezo actuator, we can determine the wavelength of the light from the photodetector readings. This can be used as an error signal that then allows us to tune the parameters that determine the frequency of our light source.
+where $R$ is the \textit{reflectance} of the mirrors, and $F = \frac{4R}{(1-R)^2}$ is the \textit{finesse}. From these equations, if we take $n=1$, we can see that transmission is maximized when $\ell \cos \theta$ is an integer multiple of the wavelength. Therefore, in practice, we direct our light source at the cavity at an angle of $\theta = 0$, tune the length using a piezoelectric actuator (identical to the one used to tune the ECDL diffraction grating), and place a photodetector at the cavity `exit'. Thus, if the initial length of the cavity is known, as we vary the length using the piezo actuator, we can determine the wavelength of the light from the photodetector readings. This can be used as an error signal that then allows us to tune the parameters that determine the frequency of our light source. (Pound-Drever-Hall)
 
 ## Saturated Absorption Spectroscopy
 
