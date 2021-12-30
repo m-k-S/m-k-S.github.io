@@ -4,7 +4,7 @@ title: The Monochromatic Laser
 ---
 # Photon Absorption
 
-The fundamental phenomenon that enables precise control, cooling, and trapping of neutral atoms is the excitation of bound electrons through the absorption of photons. <a href="{{site.baseurl}}2021/10/13/intro-to-atomic-trapping/">As discussed previously</a>, exciting an electron to a higher energy state requires the absorption of a photon within a very specific range of frequencies/energies. This range is known as the *line width* of an atomic transition.
+The fundamental phenomenon that enables precise control, cooling, and trapping of neutral atoms is the excitation of bound electrons through the absorption of photons. <a href="{{site.url}}2021/10/13/intro-to-atomic-trapping/">As discussed previously</a>, exciting an electron to a higher energy state requires the absorption of a photon within a very specific range of frequencies/energies. This range is known as the *line width* of an atomic transition.
 
 A discussion of the line width of atomic transitions is ubiquitous in atomic physics texts, such as [C.J. Foot](https://books.google.com/books/about/Atomic_Physics.html?id=kXYpAQAAMAAJ) or [Vasant Natarajan](https://books.google.com/books/about/Modern_Atomic_Physics.html?id=b5K9BwAAQBAJ). In essence, these derivations show how the transition rate of an atom varies with respect to the frequency of incident light, which is typically a Lorentzian distribution centered at the resonant frequency of the transition.
 

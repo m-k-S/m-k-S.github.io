@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      DIY Faraday Isolator &middot; MKSA
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://localhost:4000/public/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="http://localhost:4000/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-205C198YLS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-205C198YLS');
+  </script>
+</head>
+
+
+  <body>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="http://localhost:4000">
+          MKSA
+        </a>
+      </h1>
+      <!-- <p class="lead"></p> -->
+      <img src="http://localhost:4000/public/me_and_haas.jpg" style="max-height: 50vh; width: auto; display: block;">
+    </div>
+
+    <nav class="sidebar-nav">
+      
+
+      <a>
+        I am a security engineer, computer science researcher, and amateur physicist.
+        This site serves as a repository for my personal projects, which encompass industrial design,
+        experimental physics, light as an art medium, electronic musical instruments, and more.
+        I am a strong advocate for open-source technology and improving the accessibility of science.
+        Please feel free to reach out regarding any of my work.
+      </a>
+
+    </nav>
+
+    <p class="sidebar-footer" style="position:absolute; bottom:0; width:100%; font-size: 0.5rem;">
+      <a style="font-size:25px; position: center;">
+        <a href="https://twitter.com/m_shirokawa" class="icon-block" style="font-size:25px;">
+          <i class="fa fa-twitter" style="color:#ADD8E6;"></i>
+        </a>
+        <a href="https://github.com/m-k-S" class="icon-block" style="font-size:25px; padding-left:8px;">
+          <i class="fa fa-github" style="color:#FFFFFF;"></i>
+        </a>
+        <a href="https://incoherent.substack.com/" class="icon-block" style="font-size:25px; padding-left:8px; color:#FFD580;">
+          <i class="fa fa-rss"></i>
+        </a>
+      </a>
+
+      <br><br>
+      &copy; 2021. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title" style="font-size: 4rem;">DIY Faraday Isolator</h1>
+  <!-- <span class="post-date">10 Nov 2021</span> -->
+  <p>For a discussion of the motivation behind Faraday isolators, please <a href="http://localhost:40002021/10/14/the-monochromatic-laser/">see the section on frequency-stabilized lasers</a>. The following is a guide on how to fabricate a low-cost alternative to commercial Faraday isolators (typically &gt;$1000 in cost).</p>
+
+<p>A Faraday isolator utilizes the <a href="https://en.wikipedia.org/wiki/Faraday_effect"><strong>Faraday effect</strong></a> and the <a href="https://en.wikipedia.org/wiki/Polarization_(waves)"><strong>polarization of light</strong></a> to allow the transmission of light in only one direction. Thus, the four main components of a Faraday isolator are: an input linear polarizer, a strong magnetic field, a nonlinear optical crystal, and an output linear polarizer.</p>
+
+<h1 id="theory">Theory</h1>
+
+<p>The Faraday <em>rotator</em> is comprised of the magnetic field and the nonlinear optical crystal. The optical crystal is oriented within the magnetic field, such that its optical axis is parallel to the direction of the magnetic field. Then, as light passes through the crystal, its polarization state is rotated by an angle:</p>
+
+\[\theta = VBL\]
+
+<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
+<img src="http://localhost:4000/static/projects/mot/tgg.png" />
+     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">The Verdet constant vs. wavelength plot for terbium gallium garnet</figcaption>
+</figure>
+
+<p>where \(V\) is the <strong>Verdet constant</strong> of the crystal, \(B\) is the magnitude of the magnetic field within the crystal (assumed to be constant), and \(L\) is the length of the crystal.</p>
+
+<p>The Verdet constant is a material property, and is typically very low for most crystals - the discover of novel materials that enable Faraday rotation is an active area of research. Moreover, the Verdet constant is wavelength (and temperature) dependent, meaning that a different magnetic field strength and length will be required for different light sources.</p>
+
+<p>One of the most common materials used for Faraday rotation is <strong>terbium gallium garnet</strong> (TGG). This crystal has a very high Verdet constant - approximately 61 radians per meter-Tesla at 780nm. Thus, to achieve a 45 degree (0.785 radian) rotation (the necessary rotation for optical isolation), we require 0.0128 meter-Teslas. Since magnets are much cheaper than TGG, we utilize the strongest ring magnet we can find, thus reducing the necessary length of the TGG crystal.</p>
+
+<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
+<img src="http://localhost:4000/static/projects/mot/femm.png" />
+     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">A finite elements simulation of the axial magnetic field of the RX828 magnet</figcaption>
+</figure>
+
+<p>For this purpose, we utilize the two of the <a href="https://www.kjmagnetics.com/proddetail.asp?prod=RX828">K&amp;J Magnetics RX828</a>, which is a 1.5 inch outer diameter, 0.125 inch inner diameter, 0.5 inch thick axially magnetized ring magnet. According to <a href="https://www.femm.info/wiki/HomePage">a finite elements simulation</a>, the magnetic field magnitude along the central axis of this magnet is roughly 0.64 Tesla. Therefore, we require a 20mm long TGG crystal to complete the Faraday rotator (0.0128 meter-Tesla / 0.64 Tesla = 0.02 meter).</p>
+
+<h1 id="practice">Practice</h1>
+
+<h2 id="bill-of-materials">Bill of Materials</h2>
+
+<ul>
+  <li>K&amp;J Magnetics RX828 x 2 ($23.24 x 2)</li>
+  <li>Terbium Gallium Garnet, 20mm length x 2mm diameter (~$100)</li>
+  <li>Linear Polarizers x 2 ($15 x 2)</li>
+</ul>
+
+<h2 id="fabrication">Fabrication</h2>
+
+<p>The fabrication of the optical isolator is remarkably simple. I purchased the TGG crystal from <a href="http://www.crystro.com/">Crystro</a>, a Chinese manufacturer, for about $120 (I am not affiliated with this company in any way - but to note, North American manufacturers quoted me $600+ for the same crystal).</p>
+
+<p>The TGG crystal must be inserted down the hole of the ring magnets; for this, I used a 3mm outer diameter, 2mm inner diameter resin sheath 3D printed on a Formlabs Form2 SLA printer. The resin sheath has a small hole in the side that can be used to epoxy the crystal in place without fear of damaging the optical surfaces. I rely on the tension fit between the sheath and the inner diameter of the magnets to hold it in place. This should be quite secure unless you are shaking the rotator violently (not recommended) or pushing on the sheath with tweezers.</p>
+
+<p>I mounted the magnets in two 3D printed covers. In hindsight, I regret doing this, because it made the device much bigger than it needed to be. However, this also allows me to mount it on an optical post, which can then be put on a breadboard.</p>
+
+<p>To complete the Faraday isolator, we need two linear polarizers. These are commonly available on eBay for about $15 each (although this is also highly dependent on the wavelength of light you are using). The polarization axes of the polarizers must be offset by 45 degrees. When these are mounted on either end of the rotator, light should only be able to travel through in the direction of the magnetic field!</p>
+
+<figure style="display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;">
+<img src="http://localhost:4000/static/projects/mot/rotator-front.jpg" />
+</figure>
+
+<figure style="display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 23%;">
+  <img src="http://localhost:4000/static/projects/mot/rotator-side.jpg" />
+</figure>
+
+<p>With my build, I achieve roughly 45% transmission and 32dB isolation using a 200mW 780nm laser. A possible cause of the relatively low transmission is due to the fact that my laser beam is likely diverging before exiting the rotator (due to its relative long length and small diameter); better beam tightening and collimation may lead to better transmission.</p>
+
+</div>
+
+<!-- <div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2021/10/14/the-monochromatic-laser/">
+            The Monochromatic Laser
+            <small>14 Oct 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2021/10/13/intro-to-atomic-trapping/">
+            Introduction to Atomic Trapping
+            <small>13 Oct 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div> -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+
+    </div>
+
+  </body>
+</html>

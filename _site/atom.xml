@@ -4,7 +4,7 @@
  <title>MKSA</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2021-12-14T18:20:14-05:00</updated>
+ <updated>2021-12-30T16:14:42-05:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Max Shirokawa</name>
@@ -13,13 +13,84 @@
 
  
  <entry>
+   <title>DIY Faraday Isolator</title>
+   <link href="http://localhost:4000/2021/11/10/diy-faraday-isolator/"/>
+   <updated>2021-11-10T00:00:00-05:00</updated>
+   <id>http://localhost:4000/2021/11/10/diy-faraday-isolator</id>
+   <content type="html">&lt;p&gt;For a discussion of the motivation behind Faraday isolators, please &lt;a href=&quot;http://localhost:40002021/10/14/the-monochromatic-laser/&quot;&gt;see the section on frequency-stabilized lasers&lt;/a&gt;. The following is a guide on how to fabricate a low-cost alternative to commercial Faraday isolators (typically &amp;gt;$1000 in cost).&lt;/p&gt;
+
+&lt;p&gt;A Faraday isolator utilizes the &lt;a href=&quot;https://en.wikipedia.org/wiki/Faraday_effect&quot;&gt;&lt;strong&gt;Faraday effect&lt;/strong&gt;&lt;/a&gt; and the &lt;a href=&quot;https://en.wikipedia.org/wiki/Polarization_(waves)&quot;&gt;&lt;strong&gt;polarization of light&lt;/strong&gt;&lt;/a&gt; to allow the transmission of light in only one direction. Thus, the four main components of a Faraday isolator are: an input linear polarizer, a strong magnetic field, a nonlinear optical crystal, and an output linear polarizer.&lt;/p&gt;
+
+&lt;h1 id=&quot;theory&quot;&gt;Theory&lt;/h1&gt;
+
+&lt;p&gt;The Faraday &lt;em&gt;rotator&lt;/em&gt; is comprised of the magnetic field and the nonlinear optical crystal. The optical crystal is oriented within the magnetic field, such that its optical axis is parallel to the direction of the magnetic field. Then, as light passes through the crystal, its polarization state is rotated by an angle:&lt;/p&gt;
+
+\[\theta = VBL\]
+
+&lt;figure style=&quot;float: right; margin-left: 20px; width:40%; height:auto;&quot;&gt;
+&lt;img src=&quot;http://localhost:4000/static/projects/mot/tgg.png&quot; /&gt;
+     &lt;figcaption style=&quot;text-align:center; font-size: 13px; margin-top:-15px;&quot;&gt;The Verdet constant vs. wavelength plot for terbium gallium garnet&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;where \(V\) is the &lt;strong&gt;Verdet constant&lt;/strong&gt; of the crystal, \(B\) is the magnitude of the magnetic field within the crystal (assumed to be constant), and \(L\) is the length of the crystal.&lt;/p&gt;
+
+&lt;p&gt;The Verdet constant is a material property, and is typically very low for most crystals - the discover of novel materials that enable Faraday rotation is an active area of research. Moreover, the Verdet constant is wavelength (and temperature) dependent, meaning that a different magnetic field strength and length will be required for different light sources.&lt;/p&gt;
+
+&lt;p&gt;One of the most common materials used for Faraday rotation is &lt;strong&gt;terbium gallium garnet&lt;/strong&gt; (TGG). This crystal has a very high Verdet constant - approximately 61 radians per meter-Tesla at 780nm. Thus, to achieve a 45 degree (0.785 radian) rotation (the necessary rotation for optical isolation), we require 0.0128 meter-Teslas. Since magnets are much cheaper than TGG, we utilize the strongest ring magnet we can find, thus reducing the necessary length of the TGG crystal.&lt;/p&gt;
+
+&lt;figure style=&quot;float: right; margin-left: 20px; width:40%; height:auto;&quot;&gt;
+&lt;img src=&quot;http://localhost:4000/static/projects/mot/femm.png&quot; /&gt;
+     &lt;figcaption style=&quot;text-align:center; font-size: 13px; margin-top:-15px;&quot;&gt;A finite elements simulation of the axial magnetic field of the RX828 magnet&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;For this purpose, we utilize the two of the &lt;a href=&quot;https://www.kjmagnetics.com/proddetail.asp?prod=RX828&quot;&gt;K&amp;amp;J Magnetics RX828&lt;/a&gt;, which is a 1.5 inch outer diameter, 0.125 inch inner diameter, 0.5 inch thick axially magnetized ring magnet. According to &lt;a href=&quot;https://www.femm.info/wiki/HomePage&quot;&gt;a finite elements simulation&lt;/a&gt;, the magnetic field magnitude along the central axis of this magnet is roughly 0.64 Tesla. Therefore, we require a 20mm long TGG crystal to complete the Faraday rotator (0.0128 meter-Tesla / 0.64 Tesla = 0.02 meter).&lt;/p&gt;
+
+&lt;h1 id=&quot;practice&quot;&gt;Practice&lt;/h1&gt;
+
+&lt;h2 id=&quot;bill-of-materials&quot;&gt;Bill of Materials&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;K&amp;amp;J Magnetics RX828 x 2 ($23.24 x 2)&lt;/li&gt;
+  &lt;li&gt;Terbium Gallium Garnet, 20mm length x 2mm diameter (~$100)&lt;/li&gt;
+  &lt;li&gt;Linear Polarizers x 2 ($15 x 2)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;fabrication&quot;&gt;Fabrication&lt;/h2&gt;
+
+&lt;p&gt;The fabrication of the optical isolator is remarkably simple. I purchased the TGG crystal from &lt;a href=&quot;http://www.crystro.com/&quot;&gt;Crystro&lt;/a&gt;, a Chinese manufacturer, for about $120 (I am not affiliated with this company in any way - but to note, North American manufacturers quoted me $600+ for the same crystal).&lt;/p&gt;
+
+&lt;p&gt;The TGG crystal must be inserted down the hole of the ring magnets; for this, I used a 3mm outer diameter, 2mm inner diameter resin sheath 3D printed on a Formlabs Form2 SLA printer. The resin sheath has a small hole in the side that can be used to epoxy the crystal in place without fear of damaging the optical surfaces. I rely on the tension fit between the sheath and the inner diameter of the magnets to hold it in place. This should be quite secure unless you are shaking the rotator violently (not recommended) or pushing on the sheath with tweezers.&lt;/p&gt;
+
+&lt;p&gt;I mounted the magnets in two 3D printed covers. In hindsight, I regret doing this, because it made the device much bigger than it needed to be. However, this also allows me to mount it on an optical post, which can then be put on a breadboard.&lt;/p&gt;
+
+&lt;p&gt;To complete the Faraday isolator, we need two linear polarizers. These are commonly available on eBay for about $15 each (although this is also highly dependent on the wavelength of light you are using). The polarization axes of the polarizers must be offset by 45 degrees. When these are mounted on either end of the rotator, light should only be able to travel through in the direction of the magnetic field!&lt;/p&gt;
+
+&lt;figure style=&quot;display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;&quot;&gt;
+&lt;img src=&quot;http://localhost:4000/static/projects/mot/rotator-front.jpg&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;figure style=&quot;display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 23%;&quot;&gt;
+  &lt;img src=&quot;http://localhost:4000/static/projects/mot/rotator-side.jpg&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;With my build, I achieve roughly 45% transmission and 32dB isolation using a 200mW 780nm laser. A possible cause of the relatively low transmission is due to the fact that my laser beam is likely diverging before exiting the rotator (due to its relative long length and small diameter); better beam tightening and collimation may lead to better transmission.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>The Monochromatic Laser</title>
    <link href="http://localhost:4000/2021/10/14/the-monochromatic-laser/"/>
    <updated>2021-10-14T00:00:00-04:00</updated>
    <id>http://localhost:4000/2021/10/14/the-monochromatic-laser</id>
    <content type="html">&lt;h1 id=&quot;photon-absorption&quot;&gt;Photon Absorption&lt;/h1&gt;
 
-&lt;p&gt;The fundamental phenomenon that enables precise control, cooling, and trapping of neutral atoms is the excitation of bound electrons through the absorption of photons. &lt;a href=&quot;/2021/10/13/intro-to-atomic-trapping/&quot;&gt;As discussed previously&lt;/a&gt;, exciting an electron to a higher energy state requires the absorption of a photon within a very specific range of frequencies/energies. This range is known as the &lt;em&gt;line width&lt;/em&gt; of an atomic transition.&lt;/p&gt;
+&lt;p&gt;The fundamental phenomenon that enables precise control, cooling, and trapping of neutral atoms is the excitation of bound electrons through the absorption of photons. &lt;a href=&quot;http://localhost:40002021/10/13/intro-to-atomic-trapping/&quot;&gt;As discussed previously&lt;/a&gt;, exciting an electron to a higher energy state requires the absorption of a photon within a very specific range of frequencies/energies. This range is known as the &lt;em&gt;line width&lt;/em&gt; of an atomic transition.&lt;/p&gt;
 
 &lt;p&gt;A discussion of the line width of atomic transitions is ubiquitous in atomic physics texts, such as &lt;a href=&quot;https://books.google.com/books/about/Atomic_Physics.html?id=kXYpAQAAMAAJ&quot;&gt;C.J. Foot&lt;/a&gt; or &lt;a href=&quot;https://books.google.com/books/about/Modern_Atomic_Physics.html?id=b5K9BwAAQBAJ&quot;&gt;Vasant Natarajan&lt;/a&gt;. In essence, these derivations show how the transition rate of an atom varies with respect to the frequency of incident light, which is typically a Lorentzian distribution centered at the resonant frequency of the transition.&lt;/p&gt;
 
