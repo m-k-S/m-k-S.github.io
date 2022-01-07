@@ -34,6 +34,12 @@ For this purpose, we utilize the two of the [K&J Magnetics RX828](https://www.kj
 
 # Practice
 
+## Tools Required
+
+* FDM 3D Printer
+* SLA 3D Printer (probably optional)
+* Epoxy
+
 ## Bill of Materials
 
 * K&J Magnetics RX828 x 2 ($23.24 x 2)
