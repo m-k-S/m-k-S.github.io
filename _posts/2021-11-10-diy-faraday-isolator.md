@@ -32,7 +32,7 @@ One of the most common materials used for Faraday rotation is **terbium gallium 
 For this purpose, we utilize the two of the [K&J Magnetics RX828](https://www.kjmagnetics.com/proddetail.asp?prod=RX828), which is a 1.5 inch outer diameter, 0.125 inch inner diameter, 0.5 inch thick axially magnetized ring magnet. According to [a finite elements simulation](https://www.femm.info/wiki/HomePage), the magnetic field magnitude along the central axis of this magnet is roughly 0.64 Tesla. Therefore, we require a 20mm long TGG crystal to complete the Faraday rotator (0.0128 meter-Tesla / 0.64 Tesla = 0.02 meter).
 
 
-# Practice
+# Fabrication
 
 ## Tools Required
 
@@ -46,7 +46,7 @@ For this purpose, we utilize the two of the [K&J Magnetics RX828](https://www.kj
 * Terbium Gallium Garnet, 20mm length x 2mm diameter (~$100)
 * Linear Polarizers x 2 ($15 x 2)
 
-## Fabrication
+## Assembly
 
 The fabrication of the optical isolator is remarkably simple. I purchased the TGG crystal from [Crystro](http://www.crystro.com/), a Chinese manufacturer, for about $120 (I am not affiliated with this company in any way - but to note, North American manufacturers quoted me $600+ for the same crystal).
 

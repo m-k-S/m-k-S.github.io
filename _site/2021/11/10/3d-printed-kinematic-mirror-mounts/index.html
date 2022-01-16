@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      3D Printed Kinematic Mirror Mounts &middot; MKSA
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="http://localhost:4000/public/css/poole.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/syntax.css">
+  <link rel="stylesheet" href="http://localhost:4000/public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="icon" href="http://localhost:4000/public/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="http://localhost:4000/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-205C198YLS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-205C198YLS');
+  </script>
+</head>
+
+
+  <body>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="http://localhost:4000">
+          MKSA
+        </a>
+      </h1>
+      <!-- <p class="lead"></p> -->
+      <img src="http://localhost:4000/public/me_and_haas.jpg" style="max-height: 50vh; width: auto; display: block;">
+    </div>
+
+    <nav class="sidebar-nav">
+      
+
+      <a>
+        I am a security engineer, computer science researcher, and amateur physicist.
+        This site serves as a repository for my personal projects, which encompass industrial design,
+        experimental physics, light as an art medium, electronic musical instruments, and more.
+        I am a strong advocate for open-source technology and improving the accessibility of science.
+        Please feel free to reach out regarding any of my work.
+      </a>
+
+    </nav>
+
+    <p class="sidebar-footer" style="position:absolute; bottom:0; width:100%; font-size: 0.5rem;">
+      <a style="font-size:25px; position: center;">
+        <a href="https://twitter.com/m_shirokawa" class="icon-block" style="font-size:25px;">
+          <i class="fa fa-twitter" style="color:#ADD8E6;"></i>
+        </a>
+        <a href="https://github.com/m-k-S" class="icon-block" style="font-size:25px; padding-left:8px;">
+          <i class="fa fa-github" style="color:#FFFFFF;"></i>
+        </a>
+        <a href="https://incoherent.substack.com/" class="icon-block" style="font-size:25px; padding-left:8px; color:#FFD580;">
+          <i class="fa fa-rss"></i>
+        </a>
+      </a>
+
+      <br><br>
+      &copy; 2022. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title" style="font-size: 4rem;">3D Printed Kinematic Mirror Mounts</h1>
+  <!-- <span class="post-date">10 Nov 2021</span> -->
+  <p>The following is a guide on how to fabricate a low-cost alternative to commercial mirror mounts (around <a href="https://www.thorlabs.com/thorproduct.cfm?partnumber=KM05">$40 at their cheapest</a>). Additionally, these allow you to customize your optics holder for any shape and size of optical element, which I found particularly useful as I was buying random surplus off of eBay. As a disclaimer, these mounts will have more thermal drift than anything commercial, and thus are less suitable for long-term experiments.</p>
+
+<h1 id="theory">Theory</h1>
+
+<p>Kinematic mirror mounts are optomechanical devices ubiquitous in optical systems as they provide the ability to precisely tune the direction of a laser beam. This is achieved through the use of <a href="https://en.wikipedia.org/wiki/Kinematic_coupling"><strong>kinematic couplings</strong></a>, from which these devices get their name.</p>
+
+<p>The kinematic coupling fixtures constrain a baseplate and optics holder to be aligned in a fixed and highly repeatable manner, by ensuring that there are exactly six points of contact between the two (restricting the six mutual degrees of freedom between them). The method of affixing the baseplate and optics holder together is typically either via extension springs (most common) or magnets (but never bolts, as this would defeat the purpose of having only six points of contact).</p>
+
+<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
+<img src="http://localhost:4000/static/projects/mot/kinematics.gif" />
+     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">A visual demonstration of how a kinematic mirror mount works</figcaption>
+</figure>
+
+<p>The six points of contact in a kinematic mirror mount are given by three round-tip screws through the baseplate that contact grooves in the optics holder. As the screws are driven, they push against one side of the optics holder, forcing it to tilt slightly in that direction. Thus, if the optics holder is holding a mirror with a laser beam incident on it, the output beam directionality will shift correspondingly. The springs holding the two pieces together provide a restoring force to un-tilt the optics holder if the screw is loosened.</p>
+
+<h1 id="fabrication">Fabrication</h1>
+
+<h2 id="tools-required">Tools Required</h2>
+
+<ul>
+  <li>SLA 3D Printer (FDM possible but not recommended)</li>
+  <li>Scotch Tape</li>
+  <li>Epoxy</li>
+</ul>
+
+<h2 id="bill-of-materials">Bill of Materials</h2>
+
+<h3 id="purchase">Purchase</h3>
+
+<ul>
+  <li><a href="https://www.amazon.com/Hilitchi-250-Pcs-Threaded-Embedment-Assortment/dp/B0784VYCYY/">M4 or 6-32 Bushings</a> x 3 (~$0.10 x 3)</li>
+  <li><a href="https://www.amazon.com/Stainless-Steel-Socket-Spring-Screws/dp/B09D9H73S4/">M4 Ball-Tip Screws</a> x 3 (~$0.50 x 3)</li>
+  <li><a href="https://www.mcmaster.com/93600A061/">1.5mm diameter, 6mm length dowel pins</a> x 6 (~$0.25 x 6)</li>
+  <li><a href="https://www.mcmaster.com/9654K942/">0.125in diameter, 0.5in length extension springs</a> x 3 (~$0.80 x 3)</li>
+  <li><a href="https://www.mcmaster.com/93090A636/">M3 bushing or nut</a> (~$0.02)</li>
+</ul>
+
+<h3 id="printmachine">Print/Machine</h3>
+
+<ul>
+  <li><a href="https://github.com/m-k-S/openMOT/blob/master/cad/mirror_mounts/stl/26x20mm%20Mirror.stl">Mirror Holder</a> (modify this to your mirror dimensions)</li>
+  <li><a href="https://github.com/m-k-S/openMOT/blob/master/cad/mirror_mounts/stl/Kinematic%20Holder%20(M4%20Bushings).stl">Kinematic Mount</a> (modify the bushing holes to your bushing dimensions)</li>
+</ul>
+
+<!-- <div id="model" style="width: 500px; height: 500px"> </div>
+<script src="http://localhost:4000/public/js/three.min.js"></script>
+<script src="http://localhost:4000/public/js/STLLoader.js"></script>
+<script src="http://localhost:4000/public/js/OrbitControls.js"></script>
+
+<script type="text/javascript">
+function STLViewerEnable(classname) {
+    var models = document.getElementsByClassName(classname);
+    for (var i = 0; i < models.length; i++) {
+        STLViewer(models[i], models[i].getAttribute("data-src"));
+    }
+}
+
+function STLViewer(elementID, model) {
+    var elem = document.getElementById(elementID);
+    var renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    var camera = new THREE.PerspectiveCamera(70, elem.clientWidth / elem.clientHeight, 1, 1000);
+    renderer.setSize(elem.clientWidth, elem.clientHeight);
+    elem.appendChild(renderer.domElement);
+
+    window.addEventListener('resize', function () {
+        renderer.setSize(elem.clientWidth, elem.clientHeight);
+        camera.aspect = elem.clientWidth / elem.clientHeight;
+        camera.updateProjectionMatrix();
+    }, false);
+
+    var controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.rotateSpeed = 0.05;
+    controls.dampingFactor = 0.1;
+    controls.enableZoom = false;
+    controls.enablePan = false;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = .75;
+
+    var scene = new THREE.Scene();
+
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x080820, 1.5));
+
+    (new THREE.STLLoader()).load(model, function (geometry) {
+        var material = new THREE.MeshPhongMaterial({ color: 0xff5533, specular: 100, shininess: 100 });
+        var mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        // Compute the middle
+        var middle = new THREE.Vector3();
+        geometry.computeBoundingBox();
+        geometry.boundingBox.getCenter(middle);
+
+        // Center it
+        mesh.position.x = -1 * middle.x;
+        mesh.position.y = -1 * middle.y;
+        mesh.position.z = -1 * middle.z;
+
+        // Pull the camera away as needed
+        var largestDimension = Math.max(geometry.boundingBox.max.x,
+            geometry.boundingBox.max.y, geometry.boundingBox.max.z)
+        camera.position.z = largestDimension * 1.5;
+
+
+        var animate = function () {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }; animate();
+
+    });
+}
+window.onload = function() {
+    // STLViewer("model", "http://localhost:4000/public/Kinematic Holder (M4 Bushings).stl");
+    STLViewer("model", "https://github.com/m-k-S/openMOT/blob/master/cad/mirror_mounts/stl/Kinematic%20Holder%20(M4%20Bushings).stl");
+
+    console.log("test");
+}
+</script> -->
+
+<h2 id="assembly">Assembly</h2>
+
+<p>I salvaged mirrors from a broken LCD projector (which, as an aside, is a great source of mirrors, prisms, lenses, and dichroics!), hence the random dimensions of 26x20mm. The mirror should slot into the mirror holder tightly enough to provide a tension fit to prevent any unwanted mechanical disturbance (you can modify the design to include a tension screw, or you can epoxy the mirror in, for extra sturdiness).</p>
+
+<p>Next, epoxy your bushings into the holes in the kinematic mount. I used three M4 bushings for the adjustment screw holes, and an M3 bushing for the set screw hole to mount onto an optics post.</p>
+
+<p>Then, thread a steel dowel pin through one of the loops on the end of a spring. Drop the dowel pin (with the spring attached) through the smaller hole in the kinematic mount, so that the dowel pin sits in the rectangular inset in the mount. Place a piece of scotch tape over the inset, so that the dowel pin and spring do not fall out. Do the same for the corresponding hole on the</p>
+
+</div>
+
+<!-- <div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2021/11/10/diy-faraday-isolator/">
+            DIY Faraday Isolator
+            <small>10 Nov 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2021/10/14/the-monochromatic-laser/">
+            The Monochromatic Laser
+            <small>14 Oct 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2021/10/13/intro-to-atomic-trapping/">
+            Introduction to Atomic Trapping
+            <small>13 Oct 2021</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div> -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
+
+    </div>
+
+  </body>
+</html>

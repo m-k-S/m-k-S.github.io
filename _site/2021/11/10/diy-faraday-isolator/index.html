@@ -22,7 +22,8 @@
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
   <!-- Icons -->
-  <link rel="shortcut icon" href="http://localhost:4000/public/favicon.ico">
+  <link rel="icon" href="http://localhost:4000/public/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="http://localhost:4000/public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
@@ -82,7 +83,7 @@
       </a>
 
       <br><br>
-      &copy; 2021. All rights reserved.
+      &copy; 2022. All rights reserved.
     </p>
   </div>
 </div>
@@ -120,7 +121,15 @@
 
 <p>For this purpose, we utilize the two of the <a href="https://www.kjmagnetics.com/proddetail.asp?prod=RX828">K&amp;J Magnetics RX828</a>, which is a 1.5 inch outer diameter, 0.125 inch inner diameter, 0.5 inch thick axially magnetized ring magnet. According to <a href="https://www.femm.info/wiki/HomePage">a finite elements simulation</a>, the magnetic field magnitude along the central axis of this magnet is roughly 0.64 Tesla. Therefore, we require a 20mm long TGG crystal to complete the Faraday rotator (0.0128 meter-Tesla / 0.64 Tesla = 0.02 meter).</p>
 
-<h1 id="practice">Practice</h1>
+<h1 id="fabrication">Fabrication</h1>
+
+<h2 id="tools-required">Tools Required</h2>
+
+<ul>
+  <li>FDM 3D Printer</li>
+  <li>SLA 3D Printer (probably optional)</li>
+  <li>Epoxy</li>
+</ul>
 
 <h2 id="bill-of-materials">Bill of Materials</h2>
 
@@ -130,7 +139,7 @@
   <li>Linear Polarizers x 2 ($15 x 2)</li>
 </ul>
 
-<h2 id="fabrication">Fabrication</h2>
+<h2 id="assembly">Assembly</h2>
 
 <p>The fabrication of the optical isolator is remarkably simple. I purchased the TGG crystal from <a href="http://www.crystro.com/">Crystro</a>, a Chinese manufacturer, for about $120 (I am not affiliated with this company in any way - but to note, North American manufacturers quoted me $600+ for the same crystal).</p>
 
@@ -161,6 +170,15 @@
 <!-- <div class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2021/11/10/3d-printed-kinematic-mirror-mounts/">
+            3D Printed Kinematic Mirror Mounts
+            <small>10 Nov 2021</small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
