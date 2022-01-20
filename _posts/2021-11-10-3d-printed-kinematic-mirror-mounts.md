@@ -6,6 +6,16 @@ title: 3D Printed Kinematic Mirror Mounts
 
 The following is a guide on how to fabricate a low-cost alternative to commercial mirror mounts (around [$40 at their cheapest](https://www.thorlabs.com/thorproduct.cfm?partnumber=KM05)). Additionally, these allow you to customize your optics holder for any shape and size of optical element, which I found particularly useful as I was buying random surplus off of eBay. As a disclaimer, these mounts will have more thermal drift than anything commercial, and thus are less suitable for long-term experiments.
 
+<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
+<img src="{{site.url}}/static/projects/mot/kinematic.png"/>
+     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">Image of kinematic mirror mount in CAD software</figcaption>
+</figure>
+
+<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
+<img src="{{site.url}}/static/projects/mot/mirror-final.jpg"/>
+     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">A fully assembled kinematic mirror mount</figcaption>
+</figure>
+
 # Theory
 
 Kinematic mirror mounts are optomechanical devices ubiquitous in optical systems as they provide the ability to precisely tune the direction of a laser beam. This is achieved through the use of [**kinematic couplings**](https://en.wikipedia.org/wiki/Kinematic_coupling), from which these devices get their name.
@@ -124,4 +134,21 @@ I salvaged mirrors from a broken LCD projector (which, as an aside, is a great s
 
 Next, epoxy your bushings into the holes in the kinematic mount. I used three M4 bushings for the adjustment screw holes, and an M3 bushing for the set screw hole to mount onto an optics post.
 
-Then, thread a steel dowel pin through one of the loops on the end of a spring. Drop the dowel pin (with the spring attached) through the smaller hole in the kinematic mount, so that the dowel pin sits in the rectangular inset in the mount. Place a piece of scotch tape over the inset, so that the dowel pin and spring do not fall out. Do the same for the corresponding hole on the
+<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
+<img src="{{site.url}}/static/projects/mot/mirror-spring-tweezer.jpg"/>
+     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">Hook the spring on a dowel pin and pick the pin up with tweezers</figcaption>
+</figure>
+
+Then, thread a steel dowel pin through one of the loops on the end of a spring. Drop the dowel pin (with the spring attached) through the smaller hole in the kinematic mount, so that the dowel pin sits in the rectangular inset in the mount. Place a piece of scotch tape over the inset, so that the dowel pin and spring do not fall out. Do this for both insets. Then, flip the mirror mount over, and lift up the spring loop with a pair of tweezers. Use a second pair of tweezers to pick up another dowel pin and slide it through the spring loop. Do this for both spring slots, and then scotch tape over these holes as well.
+
+<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
+<img src="{{site.url}}/static/projects/mot/mirror-tape-assembly.jpg"/>
+     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">Tape over the dowel pins so they do not fall out when you flip the device</figcaption>
+</figure>
+
+The final step is to screw your M4 ball-tip screws into the bushings until they sit in the triangular mounting insets in the mirror holder. Drive the screws far enough so that the springs are under tension, and the dowel pins will not fall out on their own. Then, the scotch tape can be removed, the mirror mount is fully assembled.
+
+<figure style="float: right; margin-left: 20px; width:40%; height:auto;">
+<img src="{{site.url}}/static/projects/mot/mirror-tweezer-assembly.jpg"/>
+     <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">Lift the hook on the spring with one pair of tweezers and slide another dowel pin with the other pair</figcaption>
+</figure>
