@@ -42,9 +42,17 @@ For this purpose, we utilize the two of the [K&J Magnetics RX828](https://www.kj
 
 ## Bill of Materials
 
+### Purchase
+
 * K&J Magnetics RX828 x 2 ($23.24 x 2)
 * Terbium Gallium Garnet, 20mm length x 2mm diameter (~$100)
 * Linear Polarizers x 2 ($15 x 2)
+
+### Print
+
+* [RX828 Cap](https://github.com/m-k-S/openMOT/blob/master/cad/ecdl/RX828%20Cap.step) x 2
+* [TGG Sheath](https://github.com/m-k-S/openMOT/blob/master/cad/ecdl/TGG%20Sheath.step) 
+* [Isolator Mount for Optical Post](https://github.com/m-k-S/openMOT/blob/master/cad/ecdl/IsolatorMount.step)
 
 ## Assembly
 
