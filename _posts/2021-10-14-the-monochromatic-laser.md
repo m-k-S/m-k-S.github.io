@@ -9,7 +9,7 @@ The fundamental phenomenon that enables precise control, cooling, and trapping o
 A discussion of the line width of atomic transitions is ubiquitous in atomic physics texts, such as [C.J. Foot](https://books.google.com/books/about/Atomic_Physics.html?id=kXYpAQAAMAAJ) or [Vasant Natarajan](https://books.google.com/books/about/Modern_Atomic_Physics.html?id=b5K9BwAAQBAJ). In essence, these derivations show how the transition rate of an atom varies with respect to the frequency of incident light, which is typically a Lorentzian distribution centered at the resonant frequency of the transition.
 
 <figure style="float: right; margin-left: 20px; width:40%; height:auto;">
-<img src="{{site.url}}/static/projects/mot/rb_linewidth.png"/>
+<img src="{{site.url}}/static/projects/mot/rb_linewidth.jpg"/>
      <figcaption style="text-align:center; font-size: 13px; margin-top:-15px;">The transition diagram for Rubidium-87</figcaption>
 </figure>
 
